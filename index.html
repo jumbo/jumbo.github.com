@@ -1,41 +1,103 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html  lang="en" ng-app="resume">
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>my page</title>
+  <meta charset="utf-8">
+  <title>Resume</title>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/app.js"></script>
+  <script src="lib/controllers.js"></script>
+  <style type="text/css" media="screen">
+  html {
+    background-color: #ccc;
+    font-family: Arial;
+  }
+  body>div{
+    width: 888px;
+    padding: 36px 56px 36px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0 0 5px #333;
+  }
+  ul{
+    margin:0;
+    padding-left: 56px;
+    list-style: none;
+  }
+  ul li{
+    color: #4d4d4d;
+    line-height: 24px;
+  }
+  h1{
+    font-size: 64px;
+    margin-bottom: 0;
+  }
+  h2{
+    color: #4bbfc1;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  h5{
+    margin-top:0; 
+    font-size: 14px;
+    color: #818185;
+    font-weight: normal;
+  }
+  .progress{
+    background: #c8ebeb;
+    width: 300px;
+    height: 10px;
+  }
+  .progress span{
+    display: block;
+    height: 100%;
+    background: #4bbebe;
+  }
+
+  .skills li{
+    margin-bottom:10px; 
+    font-size: 14px;
+  }
+  .half{
+    width: 50%;
+    float: left;
+  }
+  .piewrapper{
+    position: relative;
+    height: 200px;
+    margin-left: 150px;
+  }
+  .pie{
+    width:100px;
+    height:200px;
+    overflow: hidden;
+    position:absolute;
+    -webkit-transform-origin:0 50%;
+  }
+  .halfcircle{
+    width:100px;
+    height:200px;
+    position: absolute;
+    left: -100px;
+    background-color:#ffffff;
+    box-sizing:border-box;
+    border:10px solid #4bbebe;
+    border-right: none;
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    -webkit-transform-origin:100% 50%;
+  }
+  .halfcircle.orange{
+    border-color: orange;
+  }
+  .halfcircle.green{
+    border-color: green;
+  } 
+  /* Print Style */
+  @media print {
+
+  }
+  </style>
 </head>
-
 <body>
-		<header>
-				<nav>
-						<ul>
-								<li>Your menu</li>
-						</ul>
-				</nav>
-		</header>
-
-		<section>
-				<article>
-						<header>
-								<h2>Article title</h2>
-								<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-						</header>
-						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-				</article>
-				<article>
-						<header>
-								<h2>Article title</h2>
-								<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-						</header>
-						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-				</article>
-		</section>
-		<aside>
-				<h2>About section</h2>
-				<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</aside>
-		<footer>
-				<p>Copyright 2009 Your name</p>
-		</footer>
+  <div ng-view></div>
 </body>
 </html>

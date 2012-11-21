@@ -1,0 +1,42 @@
+<h1>{{resume.profile.name}}</h1>
+<h5>Web Developer</h5>
+
+<h2>Education</h2>
+<ul class="edu">
+	<li ng-repeat="edu in resume.education">{{edu.startDate}} - {{edu.endDate}} {{edu.school}} {{edu.subject}}</li>
+</ul>
+
+<h2>Experience</h2>
+<ul class="exp">
+	<li ng-repeat="exp in resume.experience">{{exp.startDate}} - {{exp.endDate}} {{exp.company}} {{exp.title}}</li>
+</ul>
+
+<div class="half left">
+	<h2>Skills</h2>
+	<ul class="skills">
+		<li ng-repeat="skill in resume.skills">
+			{{skill.name}}
+			<div class="progress">
+				<span style="width:{{skill.level*300}}px"></span>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="half left">
+	<h2>Proficiency</h2>
+	<div class="piewrapper">
+		<div class="pie">
+				<div class="halfcircle" style="-webkit-transform:rotate(180deg);"></div>
+			</div>
+			<div class="pie" style="-webkit-transform:rotate(180deg);">
+				<div class="halfcircle orange" style="-webkit-transform:rotate(60deg);"></div>
+			</div>
+			<div class="pie" style="-webkit-transform:rotate(240deg);">
+				<div class="halfcircle green" style="-webkit-transform:rotate(120deg);"></div>
+		</div>
+	</div>
+</div>
+<h2>Work</h2>
+<ul class="projects">
+	<li ng-repeat="proj in resume.projects">{{proj.name}} {{proj.playas}} {{proj.text}}</li>
+</ul>
