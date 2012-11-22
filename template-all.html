@@ -10,30 +10,29 @@
 </div>
 
 <div class="row">
-	<div class="six columns">
+	<div class="twelve columns">
 		<h3>Education</h3>
 		<ul class="edu">
 			<li ng-repeat="edu in resume.education" class="row">
 				<div class="four columns">
-					{{edu.startDate}} - {{edu.endDate}}
+					<h4>{{edu.school}}</h4>
+					<p class="date">{{edu.startDate}} - {{edu.endDate}}</p>
 				</div>
 				<div class="eight columns">
-					<p>{{edu.school}}</p>
-					<p>{{edu.subject}} {{edu.text}}</p>
+					<h4>{{edu.subject}}</h4>
+					<p>{{edu.text}}</p>
 				</div>
 			</li>
 		</ul>
-	</div>
-
-	<div class="six columns">
 		<h3>Experience</h3>
 		<ul class="exp">
 			<li ng-repeat="exp in resume.experience" class="row">
 				<div class="four columns">
-					{{exp.startDate}} - {{exp.endDate}}
+					<h4>{{exp.company}}</h4>
+					<p class="date">{{exp.startDate}} - {{exp.endDate}}</p>
 				</div>
 				<div class="eight columns">
-					<p>{{exp.company}} {{exp.title}}</p>
+					<h4> {{exp.title}}</h4>
 					<p>{{exp.text}}</p>
 				</div>
 			</li>
