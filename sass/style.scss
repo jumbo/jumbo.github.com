@@ -108,6 +108,25 @@ div.progress .meter { display: block; height: 100%;}
 .major { background-color: #4bbebe }
 .orange { border-color: orange; }
 .gray { border-color: gray; }
+
+#pie1{
+  .halfcircle{
+    @include transform2d(rotate(180deg));
+  }
+}
+#pie2{
+  @include transform2d(rotate(180deg));
+  .halfcircle{
+    @include transform2d(rotate(60deg));
+  }
+}
+#pie3{
+  @include transform2d(rotate(240deg));
+  .halfcircle{
+    @include transform2d(rotate(120deg));
+  }
+}
+
 }
 
 @media print{
