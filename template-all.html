@@ -1,11 +1,11 @@
 <div class="row">
 	<div class="nine columns">
 		<h1>{{resume.profile.name}}</h1>
-		<h5><span ng-repeat="title in resume.profile.workAs">{{title}} </span></h5>
+		<h5><span ng-repeat="title in resume.profile.workAs">{{title}}</span></h5>
 	</div>
 	<div class="three columns contact">
-		<p><a href="tel:{{resume.profile.phone}}">{{resume.profile.phone}}</a></p>
-		<p><a href="mailto:{{resume.profile.email}}?subject=Job" "email me">{{resume.profile.email}}</a></p>
+		<p><a href="tel:{{resume.profile.phone}}">{{resume.profile.phone}}</a><br>
+			<a href="mailto:{{resume.profile.email}}?subject=Job" "email me">{{resume.profile.email}}</a></p>
 	</div>
 </div>
 
@@ -70,7 +70,7 @@
 		<div class="skills row">
 			<div ng-repeat="skill in resume.skills" class="six columns">
 				<h4>{{skill.name}}</h4>
-				<div class="progress round major">
+				<div class="progress major">
 					<span class="meter" style="width:{{skill.level*100}}%"></span>
 				</div>
 			</div>
@@ -79,8 +79,10 @@
 </div>
 
 <div class="row">
-	<h3>Work</h3>
-	<ul class="projects">
-		<li ng-repeat="proj in resume.projects">{{proj.name}} {{proj.playas}} {{proj.text}}</li>
-	</ul>
+	<div class="twelve columns">
+		<h3>Work</h3>
+		<ul class="projects">
+			<li ng-repeat="proj in resume.projects">{{proj.name}} {{proj.playas}} {{proj.text}}</li>
+		</ul>
+	</div>
 </div>

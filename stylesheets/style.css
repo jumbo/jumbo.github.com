@@ -1,6 +1,7 @@
 @media screen {
   body {
     background-color: #ccc;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif,"黑体";
   }
 
   p {
@@ -59,7 +60,7 @@
   }
 
   div.progress {
-    height: 18px;
+    height: 16px;
     background: #c8ebeb;
   }
 

@@ -1,7 +1,10 @@
 @import "compass/css3";
 
 @media screen {
-body { background-color: #ccc; }
+body { 
+  background-color: #ccc;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif,"黑体";
+}
 p {
   margin-bottom: 8px;
   color:rgb(130,130,130);
@@ -24,7 +27,7 @@ h1 { margin-bottom: 0; font-size: 56px; }
 h3 { color: #4bbfc1; text-transform: uppercase; font-weight: normal; }
 h4 { font-size:16px; font-weight:normal;text-transform: uppercase; color:rgb(66,66,66); margin:6px 0;}
 h5 { color: #818185; font-weight:normal; font-size:14px;}
-div.progress { height: 18px; background: #c8ebeb; }
+div.progress { height: 16px; background: #c8ebeb; }
 div.progress.major .meter{ background-color:#4bbebe}
 div.progress .meter { display: block; height: 100%;}
 .skills li { margin-bottom: 10px; font-size: 14px; }
