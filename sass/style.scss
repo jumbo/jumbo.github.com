@@ -72,25 +72,25 @@ div.progress .meter { display: block; height: 100%;}
     border-width:1px 1px 0 0;
     top: 15px;;
     left: 60px;    
-    -webkit-transform: skew(45deg);
+    @include transform(skewX(45deg));
   }
   &.lb{
     border-width:0 1px 1px 0;
     top: 146px;
     left: 60px;
-    -webkit-transform: skew(-45deg);
+    @include transform(skewX(-45deg));
   }
   &.rt{
     border-width:1px 0 0 1px;
     top: 15px;;
     right: 60px;    
-    -webkit-transform: skew(-45deg);
+    @include transform(skewX(-45deg));
   }
   &.rb{
     border-width:0 0 1px 1px;
     top: 146px;;
     right: 60px;    
-    -webkit-transform: skew(45deg);
+    @include transform(skewX(45deg));
   }
 }
 .halfcircle {
