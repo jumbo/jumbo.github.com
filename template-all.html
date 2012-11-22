@@ -1,42 +1,87 @@
-<h1>{{resume.profile.name}}</h1>
-<h5>Web Developer</h5>
-
-<h2>Education</h2>
-<ul class="edu">
-	<li ng-repeat="edu in resume.education">{{edu.startDate}} - {{edu.endDate}} {{edu.school}} {{edu.subject}}</li>
-</ul>
-
-<h2>Experience</h2>
-<ul class="exp">
-	<li ng-repeat="exp in resume.experience">{{exp.startDate}} - {{exp.endDate}} {{exp.company}} {{exp.title}}</li>
-</ul>
-
-<div class="half left">
-	<h2>Skills</h2>
-	<ul class="skills">
-		<li ng-repeat="skill in resume.skills">
-			{{skill.name}}
-			<div class="progress">
-				<span style="width:{{skill.level*300}}px"></span>
-			</div>
-		</li>
-	</ul>
+<div class="row">
+	<div class="nine columns">
+		<h1>{{resume.profile.name}}</h1>
+		<h5><span ng-repeat="title in resume.profile.workAs">{{title}} </span></h5>
+	</div>
+	<div class="three columns contact">
+		<p><a href="tel:{{resume.profile.phone}}">{{resume.profile.phone}}</a></p>
+		<p><a href="mailto:{{resume.profile.email}}?subject=Job" "email me">{{resume.profile.email}}</a></p>
+	</div>
 </div>
-<div class="half left">
-	<h2>Proficiency</h2>
-	<div class="piewrapper">
-		<div class="pie">
-				<div class="halfcircle" style="-webkit-transform:rotate(180deg);"></div>
+
+<div class="row">
+	<div class="six columns">
+		<h3>Education</h3>
+		<ul class="edu">
+			<li ng-repeat="edu in resume.education" class="row">
+				<div class="four columns">
+					{{edu.startDate}} - {{edu.endDate}}
+				</div>
+				<div class="eight columns">
+					<p>{{edu.school}}</p>
+					<p>{{edu.subject}} {{edu.text}}</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="six columns">
+		<h3>Experience</h3>
+		<ul class="exp">
+			<li ng-repeat="exp in resume.experience" class="row">
+				<div class="four columns">
+					{{exp.startDate}} - {{exp.endDate}}
+				</div>
+				<div class="eight columns">
+					<p>{{exp.company}} {{exp.title}}</p>
+					<p>{{exp.text}}</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="six columns">
+		<h3>Proficiency</h3>
+		<div class="row piewrapper">
+			<div class="tipline lt"></div>
+			<div class="tipline lb"></div>
+			<div class="tipline rt"></div>
+			<div class="tipline rb"></div>
+			<div class="tiptext lt">HTML</div>
+			<div class="tiptext lb">CSS</div>
+			<div class="tiptext rt">JS</div>
+			<div class="tiptext rb">php</div>
+			<div class="pie">
+					<div class="halfcircle" style="-webkit-transform:rotate(180deg);"></div>
 			</div>
 			<div class="pie" style="-webkit-transform:rotate(180deg);">
 				<div class="halfcircle orange" style="-webkit-transform:rotate(60deg);"></div>
 			</div>
 			<div class="pie" style="-webkit-transform:rotate(240deg);">
-				<div class="halfcircle green" style="-webkit-transform:rotate(120deg);"></div>
+					<div class="halfcircle gray" style="-webkit-transform:rotate(120deg);"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="six columns">
+		<h3>Skills</h3>
+		<div class="skills row">
+			<div ng-repeat="skill in resume.skills" class="six columns">
+				<h4>{{skill.name}}</h4>
+				<div class="progress round major">
+					<span class="meter" style="width:{{skill.level*100}}%"></span>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
-<h2>Work</h2>
-<ul class="projects">
-	<li ng-repeat="proj in resume.projects">{{proj.name}} {{proj.playas}} {{proj.text}}</li>
-</ul>
+
+<div class="row">
+	<h3>Work</h3>
+	<ul class="projects">
+		<li ng-repeat="proj in resume.projects">{{proj.name}} {{proj.playas}} {{proj.text}}</li>
+	</ul>
+</div>

@@ -1,21 +1,25 @@
 {
-    "profile":{
-        "name":"Jumbo",
-        "email":"jumbo.yin@gmail.com",
-        "phone":"15618585816"
+    "profile": {
+        "name": "Jumbo",
+        "email": "jumbo.yin@gmail.com",
+        "phone": "15618585816",
+        "workAs":["Web Developer","Web Designer"]
+
     },
     "experience": [
         {
             "startDate": "2005.7",
             "endDate": "2010.7",
             "company": "第九城市",
-            "title": "资深网页工程师"
+            "title": "资深网页工程师",
+            "text": "是否是困难，收费卡卡来访看，阿司法降低妇女"
         },
         {
             "startDate": "2010.7",
             "endDate": "2012.10",
             "company": "盛大网络",
-            "title": "资深前端开发工程师"
+            "title": "资深前端开发工程师",
+            "text": "是否是困难，收费卡卡来访看，阿司法降低妇女"
         }
     ],
     "education": [
@@ -23,7 +27,8 @@
             "startDate": "2001.9",
             "endDate": "2005.7",
             "school": "南京大学",
-            "subject": "数学系"
+            "subject": "数学系",
+            "text": "信息与计算科学"
         }
     ],
     "skills": [
@@ -46,6 +51,11 @@
             "name": "PHP",
             "level": "0.3",
             "text": ""
+        },
+        {
+            "name": "python",
+            "level": "0.2",
+            "text": ""
         }
     ],
     "projects": [
@@ -61,7 +71,7 @@
         },
         {
             "project": "Mochi",
-            "playas": "",
+            "playAs": "",
             "text": ""
         }
     ]

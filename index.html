@@ -3,101 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>Resume</title>
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/app.js"></script>
-  <script src="lib/controllers.js"></script>
-  <style type="text/css" media="screen">
-  html {
-    background-color: #ccc;
-    font-family: Arial;
-  }
-  body>div{
-    width: 888px;
-    padding: 36px 56px 36px;
-    background-color: #fff;
-    margin: 0 auto;
-    box-shadow: 0 0 5px #333;
-  }
-  ul{
-    margin:0;
-    padding-left: 56px;
-    list-style: none;
-  }
-  ul li{
-    color: #4d4d4d;
-    line-height: 24px;
-  }
-  h1{
-    font-size: 64px;
-    margin-bottom: 0;
-  }
-  h2{
-    color: #4bbfc1;
-    font-weight: normal;
-    text-transform: uppercase;
-  }
-  h5{
-    margin-top:0; 
-    font-size: 14px;
-    color: #818185;
-    font-weight: normal;
-  }
-  .progress{
-    background: #c8ebeb;
-    width: 300px;
-    height: 10px;
-  }
-  .progress span{
-    display: block;
-    height: 100%;
-    background: #4bbebe;
-  }
-
-  .skills li{
-    margin-bottom:10px; 
-    font-size: 14px;
-  }
-  .half{
-    width: 50%;
-    float: left;
-  }
-  .piewrapper{
-    position: relative;
-    height: 200px;
-    margin-left: 150px;
-  }
-  .pie{
-    width:100px;
-    height:200px;
-    overflow: hidden;
-    position:absolute;
-    -webkit-transform-origin:0 50%;
-  }
-  .halfcircle{
-    width:100px;
-    height:200px;
-    position: absolute;
-    left: -100px;
-    background-color:#ffffff;
-    box-sizing:border-box;
-    border:10px solid #4bbebe;
-    border-right: none;
-    border-radius: 100% 0 0 100% / 50% 0 0 50%;
-    -webkit-transform-origin:100% 50%;
-  }
-  .halfcircle.orange{
-    border-color: orange;
-  }
-  .halfcircle.green{
-    border-color: green;
-  } 
-  /* Print Style */
-  @media print {
-
-  }
-  </style>
+  <script src="javascripts/angular/angular.js"></script>
+  <script src="javascripts/app.js"></script>
+  <script src="javascripts/controllers.js"></script>
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
-  <div ng-view></div>
+  <div class="container" id="profile" ng-view>
+  </div>
 </body>
 </html>

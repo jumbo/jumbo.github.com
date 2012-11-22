@@ -1,0 +1,113 @@
+@import "compass/css3";
+
+@media screen {
+body { background-color: #ccc; }
+p {
+  margin-bottom: 8px;
+}
+.container {
+  @include box-shadow(#333 0 0 5px);
+  padding-top: 24px;
+  background-color: #fff;
+  ul { margin: 0; padding-left: 24px; list-style: none;
+    li { color: #4d4d4d; line-height: 24px; }
+  }
+}
+.contact{
+  padding-top:30px;
+}
+h1 { margin-bottom: 0; font-size: 56px; }
+h3 { color: #4bbfc1; text-transform: uppercase; font-weight: normal; }
+h4 { font-size:14px; font-weight:normal;text-transform: uppercase; color:#4d4d4d; margin:6px 0;}
+h5 { color: #818185; font-weight:normal; font-size:14px;}
+div.progress { height: 18px; background: #c8ebeb; }
+div.progress.major .meter{ background-color:#4bbebe}
+div.progress .meter { display: block; height: 100%;}
+.skills li { margin-bottom: 10px; font-size: 14px; }
+.piewrapper { position: relative; height: 200px; }
+.pie {
+  @include transform-origin(0,50%);
+  position: absolute;
+  left: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 200px;
+}
+.tiptext{
+  position:absolute;
+  width: 60px;
+  height: auto;
+  font-size: 14px;
+  color: #4d4d4d;
+  text-align: center;
+  text-transform: uppercase;
+  &.lt{
+    top: 0;
+    left: 40px;
+  }
+  &.lb{
+    top: 168px;
+    left: 40px;
+  }
+  &.rt{
+    top: 0;
+    right: 40px;
+  }
+  &.rb{
+    top: 168px;
+    right: 40px;
+  }
+}
+.tipline{
+  position:absolute;
+  width: 60px;
+  height: 40px;
+  border-color:#bbb;
+  border-style:solid;
+  &.lt{
+    border-width:1px 1px 0 0;
+    top: 15px;;
+    left: 60px;    
+    -webkit-transform: skew(45deg);
+  }
+  &.lb{
+    border-width:0 1px 1px 0;
+    top: 146px;
+    left: 60px;
+    -webkit-transform: skew(-45deg);
+  }
+  &.rt{
+    border-width:1px 0 0 1px;
+    top: 15px;;
+    right: 60px;    
+    -webkit-transform: skew(-45deg);
+  }
+  &.rb{
+    border-width:0 0 1px 1px;
+    top: 146px;;
+    right: 60px;    
+    -webkit-transform: skew(45deg);
+  }
+}
+.halfcircle {
+  @include box-sizing(border-box);
+  @include border-radius(100% 0 0 100% / 50% 0 0 50%);
+  position: absolute;
+  left: -100px;
+  width: 100px;
+  height: 200px;
+  border: 16px solid #4bbebe;
+  border-right: none;
+  background-color: #fff;
+  @include transform-origin(100%,50%);
+}
+.major { background-color: #4bbebe }
+.orange { border-color: orange; }
+.gray { border-color: gray; }
+}
+
+@media print{
+  h3{
+    
+  }
+}
