@@ -1,38 +1,75 @@
 @import "compass/css3";
 
+$mainColor: #4bbebe;
+$secondaryColor:#424242;
+
 @media screen {
 body { 
   background-color: #ccc;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif,"黑体";
-}
-h1,h2,h3,h4,h5,h6{
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif,"黑体";
 }
 p {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif,"黑体";
   margin-bottom: 8px;
-  color:rgb(130,130,130);
+  color:lighten($secondaryColor,40%);
 }
 .container {
   @include box-shadow(#333 0 0 5px);
   padding-top: 24px;
   background-color: #fff;
-  ul { margin: 0; padding-left: 24px; list-style: none;
-    li { color: #4d4d4d; line-height: 24px; }
+  ul { margin: 0; padding-left: 35px; list-style: none;
+    li { color: $secondaryColor; line-height: 24px; }
+  }
+  .contact{
+    ul{
+      padding-left: 0;
+    }
   }
 }
-.contact{
-  padding-top:30px;
-}
 .date{
-  color: rgb(180,180,180);
+  color: lighten($secondaryColor,50%);
 }
+.icon{
+  display: block;
+  float: left;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: $mainColor;
+  -webkit-mask-size: 30px;
+}
+.icon-edu{
+  -webkit-mask-image: inline-image("icons/gradhat.png");
+}
+.icon-exp{
+  -webkit-mask-image: inline-image("icons/clock2.png");
+}
+.icon-skills{
+  -webkit-mask-image: inline-image("icons/lab.png");
+}
+.icon-proficiency{
+  -webkit-mask-image: inline-image("icons/target.png");
+}
+.icon-projects{
+  -webkit-mask-image: inline-image("icons/archive.png");
+} 
+.icon-phone{
+  -webkit-mask-image: inline-image("icons/iphone.png");
+  -webkit-mask-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.icon-email{
+  -webkit-mask-image: inline-image("icons/email.png");
+  -webkit-mask-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
 h1 { margin-bottom: 0; font-size: 56px; }
-h3 { color: #4bbfc1; text-transform: uppercase; font-weight: normal; }
-h4 { font-size:16px; font-weight:normal;text-transform: uppercase; color:rgb(66,66,66); margin:6px 0;}
-h5 { color: #818185; font-weight:normal; font-size:14px;}
-div.progress { height: 16px; background: #c8ebeb; }
-div.progress.major .meter{ background-color:#4bbebe}
+h3 { color: $mainColor; text-transform: uppercase; font-weight: normal;}
+h4 { margin:6px 0; color:$secondaryColor; text-transform: uppercase; font-weight:normal; font-size:16px;}
+h5 { margin:0 0 5px; color: lighten($secondaryColor,40%); font-weight:normal; font-size:14px;}
+div.progress { height: 16px; background-color: lighten($mainColor,30%); }
+div.progress .meter{ background-color:$mainColor;}
 div.progress .meter { display: block; height: 100%;}
 .skills li { margin-bottom: 10px; font-size: 14px; }
 .piewrapper { position: relative; height: 200px; }
@@ -46,75 +83,74 @@ div.progress .meter { display: block; height: 100%;}
 }
 .tiptext{
   position:absolute;
-  width: 60px;
+  width: 80px;
   height: auto;
-  font-size: 14px;
-  color: #4d4d4d;
+  color: lighten($secondaryColor,40%);
   text-align: center;
   text-transform: uppercase;
+  font-size: 14px;
   &.lt{
     top: 0;
-    left: 40px;
+    left: 10%;
   }
   &.lb{
     top: 168px;
-    left: 40px;
+    left: 10%;
   }
   &.rt{
     top: 0;
-    right: 40px;
+    right: 10%;
   }
   &.rb{
     top: 168px;
-    right: 40px;
+    right: 10%;
   }
 }
 .tipline{
   position:absolute;
-  width: 60px;
-  height: 40px;
-  border-color:#bbb;
+  width: 20%;
+  height: 20%;
   border-style:solid;
-  &.lt{
-    border-width:1px 1px 0 0;
-    top: 15px;;
-    left: 60px;    
+  border-color:lighten($secondaryColor,50%);
+  &.lt{    
     @include transform(skewX(45deg));
+    top: 15px;
+    left: 60px;
+    border-width:1px 1px 0 0;;
   }
   &.lb{
-    border-width:0 1px 1px 0;
+    @include transform(skewX(-45deg));
     top: 146px;
     left: 60px;
-    @include transform(skewX(-45deg));
+    border-width:0 1px 1px 0;
   }
-  &.rt{
-    border-width:1px 0 0 1px;
-    top: 15px;;
-    right: 60px;    
+  &.rt{    
     @include transform(skewX(-45deg));
+    top: 15px;
+    right: 60px;
+    border-width:1px 0 0 1px;;
   }
-  &.rb{
-    border-width:0 0 1px 1px;
-    top: 146px;;
-    right: 60px;    
+  &.rb{    
     @include transform(skewX(45deg));
+    top: 146px;
+    right: 60px;
+    border-width:0 0 1px 1px;;
   }
 }
 .halfcircle {
   @include box-sizing(border-box);
-  @include border-radius(100% 0 0 100% / 50% 0 0 50%);
+  @include transform-origin(100%,50%);
   position: absolute;
   left: -100px;
   width: 100px;
   height: 200px;
-  border: 16px solid #4bbebe;
+  border: 16px solid $mainColor;
   border-right: none;
   background-color: #fff;
-  @include transform-origin(100%,50%);
+  @include border-radius(100% 0 0 100% / 50% 0 0 50%);
 }
-.major { background-color: #4bbebe }
-.orange { border-color: orange; }
-.gray { border-color: gray; }
+.light { border-color: lighten($mainColor,15%); }
+.lighten { border-color: lighten($mainColor,30%); }
 
 #pie1{
   .halfcircle{

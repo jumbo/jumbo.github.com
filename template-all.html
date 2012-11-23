@@ -1,17 +1,19 @@
 <div class="row">
 	<div class="nine columns">
 		<h1>{{resume.profile.name}}</h1>
-		<h5><span ng-repeat="title in resume.profile.workAs">{{title}}</span></h5>
+		<h5><span ng-repeat="title in resume.profile.workAs">{{title}} </span></h5>
 	</div>
 	<div class="three columns contact">
-		<p><a href="tel:{{resume.profile.phone}}">{{resume.profile.phone}}</a><br>
-			<a href="mailto:{{resume.profile.email}}?subject=Job" "email me">{{resume.profile.email}}</a></p>
+		<ul>
+			<li><span class="icon icon-email"></span><a href="mailto:{{resume.profile.email}}?subject=Job" "email me">{{resume.profile.email}}</a></p></li>
+			<li><span class="icon icon-phone"></span><a href="tel:{{resume.profile.phone}}">{{resume.profile.phone}}</a></li>
+		</ul>
 	</div>
 </div>
 
 <div class="row">
 	<div class="twelve columns">
-		<h3>Education</h3>
+		<h3><span class="icon icon-edu"></span>Education</h3>
 		<ul class="edu">
 			<li ng-repeat="edu in resume.education" class="row">
 				<div class="four columns">
@@ -24,7 +26,7 @@
 				</div>
 			</li>
 		</ul>
-		<h3>Experience</h3>
+		<h3><span class="icon icon-exp"></span>Experience</h3>
 		<ul class="exp">
 			<li ng-repeat="exp in resume.experience" class="row">
 				<div class="four columns">
@@ -43,34 +45,32 @@
 
 <div class="row">
 	<div class="six columns">
-		<h3>Proficiency</h3>
+		<h3><span class="icon icon-proficiency"></span>Proficiency</h3>
 		<div class="row piewrapper">
 			<div class="tipline lt"></div>
 			<div class="tipline lb"></div>
 			<div class="tipline rt"></div>
-			<div class="tipline rb"></div>
-			<div class="tiptext lt">HTML</div>
-			<div class="tiptext lb">CSS</div>
-			<div class="tiptext rt">JS</div>
-			<div class="tiptext rb">php</div>
+			<div class="tiptext lt">Design</div>
+			<div class="tiptext lb">wireframe</div>
+			<div class="tiptext rt">Develop</div>
 			<div class="pie" id="pie1">
 					<div class="halfcircle"></div>
 			</div>
 			<div class="pie"  id="pie2">
-				<div class="halfcircle orange"></div>
+				<div class="halfcircle lighten"></div>
 			</div>
 			<div class="pie"  id="pie3">
-					<div class="halfcircle gray"></div>
+					<div class="halfcircle light"></div>
 			</div>
 		</div>
 	</div>
 
 	<div class="six columns">
-		<h3>Skills</h3>
+		<h3><span class="icon icon-skills"></span>Skills</h3>
 		<div class="skills row">
 			<div ng-repeat="skill in resume.skills" class="six columns">
-				<h4>{{skill.name}}</h4>
-				<div class="progress major">
+				<h5>{{skill.name}}</h5>
+				<div class="progress">
 					<span class="meter" style="width:{{skill.level*100}}%"></span>
 				</div>
 			</div>
@@ -80,7 +80,7 @@
 
 <div class="row">
 	<div class="twelve columns">
-		<h3>Work</h3>
+		<h3><span class="icon icon-projects"></span>Work</h3>
 		<ul class="projects">
 			<li ng-repeat="proj in resume.projects">{{proj.name}} {{proj.playas}} {{proj.text}}</li>
 		</ul>
