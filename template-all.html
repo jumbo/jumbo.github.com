@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="nine columns">
 		<h1>{{resume.profile.name}}</h1>
-		<h5><span ng-repeat="title in resume.profile.workAs">{{title}} </span></h5>
+		<h5><span ng-repeat="title in resume.profile.title">{{title}} </span></h5>
 	</div>
 	<div class="three columns contact">
 		<ul>
@@ -66,13 +66,13 @@
 			<div class="tiptext lb">wireframe</div>
 			<div class="tiptext rt">Develop</div>
 			<div class="pie" id="pie1">
-					<div class="halfcircle"></div>
+				<div class="halfcircle"></div>
 			</div>
-			<div class="pie"  id="pie2">
+			<div class="pie" id="pie2">
 				<div class="halfcircle lighten"></div>
 			</div>
-			<div class="pie"  id="pie3">
-					<div class="halfcircle light"></div>
+			<div class="pie" id="pie3">
+				<div class="halfcircle light"></div>
 			</div>
 		</div>
 	</div>
@@ -82,7 +82,16 @@
 	<div class="twelve columns">
 		<h3><span class="icon icon-projects"></span>Work</h3>
 		<ul class="projects">
-			<li ng-repeat="proj in resume.projects">{{proj.name}} {{proj.playas}} {{proj.text}}</li>
+			<li ng-repeat="project in resume.projects" class="row">
+				<div class="three columns">
+					<h4>{{project.name}}</h4>
+					<h5>{{project.work}}</h5>
+				</div>
+				<div class="nine columns">
+					<p>{{project.text}}</p>
+					<p class="tags"><span ng-repeat="tag in project.tech">{{tag}} </span></p>
+				</div>
+			</li>
 		</ul>
 	</div>
 </div>

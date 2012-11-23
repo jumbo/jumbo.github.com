@@ -160,8 +160,9 @@ div.progress .meter { display: block; height: 100%;}
     border-width:0 0 1px 1px;;
   }
 }
-.light { border-color: lighten($mainColor,15%); }
-.lighten { border-color: lighten($mainColor,30%); }
+.light { border-color: lighten($mainColor,10%); }
+.lighten { border-color: lighten($mainColor,20%); }
+.lightest { border-color: lighten($mainColor,30%); }
 
 #pie1{
   .halfcircle{

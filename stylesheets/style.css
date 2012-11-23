@@ -262,10 +262,14 @@
   }
 
   .light {
-    border-color: #83d2d2;
+    border-color: #70cccc;
   }
 
   .lighten {
+    border-color: #96d9d9;
+  }
+
+  .lightest {
     border-color: #bbe7e7;
   }
 

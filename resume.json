@@ -3,8 +3,7 @@
         "name": "Jumbo",
         "email": "jumbo.yin@gmail.com",
         "phone": "15618585816",
-        "workAs":["Web Developer","Designer"]
-
+        "title":["Web / Mobile Front-end Developer"]
     },
     "experience": [
         {
@@ -43,6 +42,11 @@
             "text": ""
         },
         {
+            "name": "Photoshop&Fireworks",
+            "level": "0.7",
+            "text": ""
+        },
+        {
             "name": "JS",
             "level": "0.6",
             "text": ""
@@ -53,30 +57,41 @@
             "text": ""
         },
         {
-            "name": "Photoshop&Fireworks",
-            "level": "0.7",
-            "text": ""
-        },        {
-            "name": "python",
-            "level": "0.25",
+            "name": "Object-C",
+            "level": "0.5",
             "text": ""
         }
     ],
     "projects": [
         {
-            "project": "WoW",
-            "playas": "",
-            "text": "",
-            "sub": {
-                "name": "Site",
-                "playas": "",
-                "text": ""
-            }
+            "name": "wowchina.com",
+            "work": "网站策划，前端开发",
+            "text": "负责魔兽世界中文官方网站内容管理，架构设计和前端开发",
+            "tech":["html","css","javascript","xml","photoshop"]
         },
         {
-            "project": "Mochi",
-            "playAs": "",
-            "text": ""
+            "name": "mochimedia.com",
+            "work": "前端开发",
+            "text": "负责mochimedia网站中文站开发维护，及整合盛大用户系统的相关子站开发和设计",
+            "tech":["html","css","jquery","python","django"]
+        },
+        {
+            "name":"in.sdo.com/m",
+            "work":"前端开发,视觉设计",
+            "text":"盛大创新院官方博客触屏版开发",
+            "tech":["html","css","jquery","php","codeIgniter","wordpress"]
+        },
+        {
+            "name":"奇遇phonegap版",
+            "work":"前端开发",
+            "text":"基于phonegap技术的社交应用开发，测试可行性",
+            "tech":["html","css","javascript","backbone","zepto","phonegap"]
+        },
+        {
+            "name":"iOS会议管理应用",
+            "work":"iOS开发，功能策划，视觉设计",
+            "text":"一个自主构想的手机应用，两个人合作开发，负责前期策划，应用的视觉设计及object-c界面和数据接入相关开发",
+            "tech":["object-c","fireworks","photoshop"]
         }
     ]
 }
