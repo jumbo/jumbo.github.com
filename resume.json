@@ -44,17 +44,21 @@
         },
         {
             "name": "JS",
-            "level": "0.5",
+            "level": "0.6",
             "text": ""
         },
         {
             "name": "PHP",
-            "level": "0.3",
+            "level": "0.4",
             "text": ""
         },
         {
+            "name": "Photoshop&Fireworks",
+            "level": "0.7",
+            "text": ""
+        },        {
             "name": "python",
-            "level": "0.15",
+            "level": "0.25",
             "text": ""
         }
     ],
