@@ -83,13 +83,11 @@
 		<h3><span class="icon icon-projects"></span>Work</h3>
 		<ul class="projects">
 			<li ng-repeat="project in resume.projects" class="row">
-				<div class="three columns">
-					<h4>{{project.name}}</h4>
-					<h5>{{project.work}}</h5>
-				</div>
-				<div class="nine columns">
+				<div class="columns">
+					<h4>{{project.name}} <span>({{project.work}})</span></h4>
 					<p>{{project.text}}</p>
-					<p class="tags"><span ng-repeat="tag in project.tech">{{tag}} </span></p>
+					<div class="tags"><span ng-repeat="tag in project.tech">{{tag}}</span></div>
+					<hr>
 				</div>
 			</li>
 		</ul>

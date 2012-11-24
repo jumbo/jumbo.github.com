@@ -3,7 +3,7 @@
         "name": "Jumbo",
         "email": "jumbo.yin@gmail.com",
         "phone": "15618585816",
-        "title":["Web / Mobile Front-end Developer"]
+        "title":["Web / Mobile Developer"]
     },
     "experience": [
         {
@@ -11,14 +11,21 @@
             "endDate": "2010.7",
             "company": "第九城市",
             "title": "资深网页工程师",
-            "text": "是否是困难，收费卡卡来访看，阿司法降低妇女"
+            "text": "负责游戏官方网站的内容管理、策划及前端实现。"
         },
         {
             "startDate": "2010.7",
-            "endDate": "2012.10",
-            "company": "盛大网络",
+            "endDate": "2011.7",
+            "company": "盛大网络 － 麻球游戏(Mochimedia)",
             "title": "资深前端开发工程师",
-            "text": "是否是困难，收费卡卡来访看，阿司法降低,是否是困难，收费卡卡来访看，阿司法降低妇女是否是困难，收费卡卡来访看，阿司法降低妇女"
+            "text": "负责麻球游戏网站系统的本地化开发，包含针对android浏览器的webapp开发。"
+        },
+        {
+            "startDate": "2011.7",
+            "endDate": "2012.10",
+            "company": "盛大网络 － 创新院",
+            "title": "资深前端开发工程师",
+            "text": "前端技术研究和实践(phonegap,backbone等)，专注移动和WebApp。"
         }
     ],
     "education": [
@@ -64,19 +71,19 @@
     ],
     "projects": [
         {
-            "name": "wowchina.com",
+            "name": "Wowchina.com",
             "work": "网站策划，前端开发",
             "text": "负责魔兽世界中文官方网站内容管理，架构设计和前端开发",
             "tech":["html","css","javascript","xml","photoshop"]
         },
         {
-            "name": "mochimedia.com",
+            "name": "Mochimedia.com",
             "work": "前端开发",
             "text": "负责mochimedia网站中文站开发维护，及整合盛大用户系统的相关子站开发和设计",
             "tech":["html","css","jquery","python","django"]
         },
         {
-            "name":"in.sdo.com/m",
+            "name":"In.sdo.com/m",
             "work":"前端开发,视觉设计",
             "text":"盛大创新院官方博客触屏版开发",
             "tech":["html","css","jquery","php","codeIgniter","wordpress"]

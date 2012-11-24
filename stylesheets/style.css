@@ -8,6 +8,7 @@
   }
 
   p {
+    font-size: 14px;
     margin-bottom: 8px;
     color: #8f8f8f;
   }
@@ -114,7 +115,6 @@
   h4 {
     margin: 6px 0;
     color: #424242;
-    text-transform: uppercase;
     font-weight: normal;
     font-size: 16px;
   }
@@ -123,6 +123,11 @@
     margin: 0 0 5px;
     color: #8f8f8f;
     font-weight: normal;
+    font-size: 14px;
+  }
+
+  h4 span {
+    color: #8f8f8f;
     font-size: 14px;
   }
 
@@ -262,15 +267,30 @@
   }
 
   .light {
-    border-color: #70cccc;
+    border-color: #83d2d2;
   }
 
   .lighten {
-    border-color: #96d9d9;
+    border-color: #bbe7e7;
   }
 
   .lightest {
-    border-color: #bbe7e7;
+    border-color: #e1f4f4;
+  }
+
+  .tags span {
+    display: inline-block;
+    padding: 1px 4px;
+    height: 18px;
+    line-height: 16px;
+    margin: 0 2px 4px;
+    background-color: #757575;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
   }
 
   #pie1 .halfcircle {

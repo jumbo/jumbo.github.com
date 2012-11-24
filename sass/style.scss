@@ -11,6 +11,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: "Helvetica Neue", "Helvetica", Helvetica, "微软雅黑", Arial, sans-serif;
 }
 p {
+  font-size: 14px;
   margin-bottom: 8px;
   color:lighten($txtColor,30%);
 }
@@ -77,8 +78,13 @@ p {
 
 h1 { margin-bottom: 0; font-size: 56px; }
 h3 { color: $mainColor; text-transform: uppercase; font-weight: normal;}
-h4 { margin:6px 0; color:$txtColor; text-transform: uppercase; font-weight:normal; font-size:16px;}
+h4 { margin:6px 0; color:$txtColor; font-weight:normal; font-size:16px;}
 h5 { margin:0 0 5px; color: lighten($txtColor,30%); font-weight:normal; font-size:14px;}
+h4 span{
+  color: lighten($txtColor,30%);
+  font-size: 14px;
+}
+
 div.progress { height: 16px; background-color: lighten($mainColor,30%); margin-bottom:15px; }
 div.progress .meter{ background-color:$mainColor;}
 div.progress .meter { display: block; height: 100%;}
@@ -160,10 +166,21 @@ div.progress .meter { display: block; height: 100%;}
     border-width:0 0 1px 1px;;
   }
 }
-.light { border-color: lighten($mainColor,10%); }
-.lighten { border-color: lighten($mainColor,20%); }
-.lightest { border-color: lighten($mainColor,30%); }
-
+.light { border-color: lighten($mainColor,15%); }
+.lighten { border-color: lighten($mainColor,30%); }
+.lightest { border-color: lighten($mainColor,40%); }
+.tags{
+}
+.tags span{
+  display: inline-block;
+  padding:1px 4px;
+  height: 18px;
+  line-height: 16px;
+  margin:0 2px 4px;
+  background-color:lighten($txtColor,20%);
+  color: #fff;
+  @include border-radius(4px);
+}
 #pie1{
   .halfcircle{
     @include transform2d(rotate(180deg));
