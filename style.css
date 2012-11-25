@@ -1,0 +1,45 @@
+html { background-color: #ccc; font-family: Arial; }
+body>div {
+  background-color: #fff;
+  box-shadow: 0 0 5px #333;
+  margin: 0 auto;
+  padding: 36px 56px 36px;
+  width: 888px;
+}
+ul { list-style: none; margin: 0; padding-left: 56px; }
+ul li { color: #4d4d4d; line-height: 24px; }
+h1 { font-size: 64px; margin-bottom: 0; }
+h2 { color: #4bbfc1; font-weight: normal; text-transform: uppercase; }
+h5 {
+  color: #818185;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 0;
+}
+.progress { background: #c8ebeb; height: 10px; width: 300px; }
+.progress span { background: #4bbebe; display: block; height: 100%; }
+
+.skills li { font-size: 14px; margin-bottom: 10px; }
+.half { float: left; width: 50%; }
+.piewrapper { height: 200px; margin-left: 150px; position: relative; }
+.pie {
+  -webkit-transform-origin: 0 50%;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  width: 100px;
+}
+.halfcircle {
+  -webkit-transform-origin: 100% 50%;
+  background-color: #fff;
+  border: 10px solid #4bbebe;
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  border-right: none;
+  box-sizing: border-box;
+  height: 200px;
+  left: -100px;
+  position: absolute;
+  width: 100px;
+}
+.orange { border-color: orange; }
+.green { border-color: green; }
