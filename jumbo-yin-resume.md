@@ -9,12 +9,17 @@
 -----------------------
 ### 2011.8 - 2012.10, 盛大创新院 ###
 
-#### 项目: 奇遇 for iOS phonegap版 ####
-* 根据android版奇遇api，使用html5＋phonagap完成其iOS版。
+#### 项目: 奇遇 for iOS ####
+* 根据现有android版奇遇api，使用html5＋phonagap开发iOS版
+
+#### 项目: 创新院博客触屏版（手机访问in.sdo.com） ####
+* 设计适应触屏手机的博客界面
+* 用html5+css3开发触屏版
+* 使用CodeIgniter全新开发后端，调用原wordpress的数据库
 
 #### 项目: iOS会议管理应用 ####
-* 应用的交互和视觉设计
-* 部分界面和数据接入的iOS开发工作
+* 负责应用的交互和视觉设计
+* 开发部分用户界面和数据接入
 
 ### 2010.7 - 2011.8 盛大游戏 － 麻球游戏（mochimedia） ###
 
@@ -47,6 +52,8 @@
 
 Misc
 -----------------------
++ Markdown:[http://jumbo.github.com/jumbo-yin-resume.md](http://jumbo.github.com/jumbo-yin-resume.md)
 + HTML:[http://jumbo.github.com/jumbo-yin-resume.html](http://jumbo.github.com/jumbo-yin-resume.html)
 + PDF:[http://jumbo.github.com/jumbo-yin-resume.pdf](http://jumbo.github.com/jumbo-yin-resume.pdf)
 + RTF:[http://jumbo.github.com/jumbo-yin-resume.rtf](http://jumbo.github.com/jumbo-yin-resume.rtf)
++ HTML图文:[http://jumbo.github.com](http://jumbo.github.com)
