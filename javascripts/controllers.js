@@ -2,8 +2,9 @@
 
 /* Controllers */
 
-function ResumeListCtrl($scope, $http) {
-  $http.get('resume.json').success(function(data) {
+function ResumeListCtrl($scope, $routeParams, $http) {
+
+  $http.get($routeParams.langString+'.json').success(function(data) {
     $scope.resume = data;
   });
 }

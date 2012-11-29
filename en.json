@@ -1,0 +1,104 @@
+{
+    "profile": {
+        "name": "Jumbo Yin",
+        "email": "jumbo.yin@gmail.com",
+        "phone": "15618585816",
+        "title":["Web / Mobile Developer"]
+    },
+    "experience": [
+        {
+            "startDate": "2005.7",
+            "endDate": "2010.7",
+            "company": "The9",
+            "title": "Senior Web Developer",
+            "text": "Content Management and web develop for Wowchina.com."
+        },
+        {
+            "startDate": "2010.7",
+            "endDate": "2011.7",
+            "company": "SNDA － Mochimedia",
+            "title": "Senior Web Front-End Developer",
+            "text": "MochiMedia.com:Localization,Developing MochiMedia's business in China with the resources of SNDA Game.Include building website of Flash games, building mobile website and android app for Chinese players"
+        },
+        {
+            "startDate": "2011.7",
+            "endDate": "2012.10",
+            "company": "SNDA － Innovation",
+            "title": "Senior Web Front-End Developer",
+            "text": "Focus on mobile web and webapp,such as phonegap,backbone and AngularJs"
+        }
+    ],
+    "education": [
+        {
+            "startDate": "2001.9",
+            "endDate": "2005.7",
+            "school": "Nanjing University",
+            "subject": "Mathematics",
+            "text": "Information and Computing Sciences"
+        }
+    ],
+    "skills": [
+        {
+            "name": "HTML",
+            "level": "0.85",
+            "text": ""
+        },
+        {
+            "name": "CSS(SCSS)",
+            "level": "0.85",
+            "text": ""
+        },
+        {
+            "name": "Photoshop&Fireworks",
+            "level": "0.7",
+            "text": ""
+        },
+        {
+            "name": "JS(JQuery,Backbone,AngularJs)",
+            "level": "0.6",
+            "text": ""
+        },
+        {
+            "name": "PHP",
+            "level": "0.4",
+            "text": ""
+        },
+        {
+            "name": "Object-C",
+            "level": "0.5",
+            "text": ""
+        }
+    ],
+    "projects": [
+        {
+            "name": "Wowchina.com",
+            "work": "Content Management,Website development",
+            "text": "Front-End Engineer of Wowchina.Interaction and user experience design.",
+            "tech":["html","css","javascript","xml","photoshop"]
+        },
+        {
+            "name": "Mochimedia.com",
+            "work": "前端开发",
+            "text": "MochiMedia.com localization,",
+            "tech":["html","css","jquery","python","django"]
+        },
+        {
+            "name":"In.sdo.com/m",
+            "work":"前端开发,视觉设计",
+            "text":"盛大创新院官方博客触屏版开发",
+            "tech":["html","css","jquery","php","codeIgniter","wordpress"]
+        },
+        {
+            "name":"奇遇phonegap版",
+            "work":"前端开发",
+            "text":"基于phonegap技术的社交应用开发，测试可行性",
+            "tech":["html","css","javascript","backbone","zepto","phonegap"]
+        },
+        {
+            "name":"iOS会议管理应用",
+            "work":"iOS开发，功能策划，视觉设计",
+            "text":"一个自主构想的手机应用，两个人合作开发，负责前期策划，应用的视觉设计及object-c界面和数据接入相关开发",
+            "tech":["object-c","fireworks","photoshop"]
+        }
+    ]
+}
