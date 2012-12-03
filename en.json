@@ -2,7 +2,7 @@
     "profile": {
         "name": "Jumbo Yin",
         "email": "jumbo.yin@gmail.com",
-        "phone": "15618585816",
+        "phone": "(+86)156-1858-5816",
         "title":["Web / Mobile Developer"]
     },
     "experience": [
@@ -18,7 +18,7 @@
             "endDate": "2011.7",
             "company": "SNDA － Mochimedia",
             "title": "Senior Web Front-End Developer",
-            "text": "MochiMedia.com:Localization,Developing MochiMedia's business in China with the resources of SNDA Game.Include building website of Flash games, building mobile website and android app for Chinese players"
+            "text": "MochiMedia.com localization. Developing MochiMedia's business in China with the resources of SNDA Game."
         },
         {
             "startDate": "2011.7",
@@ -72,32 +72,32 @@
     "projects": [
         {
             "name": "Wowchina.com",
-            "work": "Content Management,Website development",
+            "work": "Web Dev,Content Management",
             "text": "Front-End Engineer of Wowchina.Interaction and user experience design.",
             "tech":["html","css","javascript","xml","photoshop"]
         },
         {
             "name": "Mochimedia.com",
-            "work": "前端开发",
-            "text": "MochiMedia.com localization,",
+            "work": "Web Dev,Interaction Design",
+            "text": "MochiMedia.com localization,Include building website of Flash games, mobile website and android app for Chinese players",
             "tech":["html","css","jquery","python","django"]
         },
         {
             "name":"In.sdo.com/m",
-            "work":"前端开发,视觉设计",
-            "text":"盛大创新院官方博客触屏版开发",
+            "work":"Web Dev,Visual Design",
+            "text":"Blog with",
             "tech":["html","css","jquery","php","codeIgniter","wordpress"]
         },
         {
-            "name":"奇遇phonegap版",
-            "work":"前端开发",
-            "text":"基于phonegap技术的社交应用开发，测试可行性",
+            "name":"Qiyu App(phonegap)",
+            "work":"Web Dev",
+            "text":"Build an iOS app with phonegap,connect to an exist social app API.",
             "tech":["html","css","javascript","backbone","zepto","phonegap"]
         },
         {
-            "name":"iOS会议管理应用",
-            "work":"iOS开发，功能策划，视觉设计",
-            "text":"一个自主构想的手机应用，两个人合作开发，负责前期策划，应用的视觉设计及object-c界面和数据接入相关开发",
+            "name":"iOS Event Management App",
+            "work":"Object-C Dev,Interaction Design,Visual Design",
+            "text":"A native iOS app developed to help people organizing events.",
             "tech":["object-c","fireworks","photoshop"]
         }
     ]

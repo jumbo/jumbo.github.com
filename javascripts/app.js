@@ -5,6 +5,6 @@
 angular.module('resume',[]).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-      when('/:langString', {templateUrl: 'template-all.html',  controller: ResumeListCtrl}).
+      when('/:lang', {templateUrl: 'template-all.html',  controller: ResumeCtrl}).
       otherwise({redirectTo: '/cn'});
 }]);

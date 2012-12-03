@@ -3,10 +3,11 @@
 		<h1>{{resume.profile.name}}</h1>
 		<h5><span ng-repeat="title in resume.profile.title">{{title}} </span></h5>
 	</div>
-	<div class="three columns contact">
+	<div class="three columns">
 		<ul>
-			<li><span class="icon icon-email"></span><a href="mailto:{{resume.profile.email}}?subject=Job" "email me">{{resume.profile.email}}</a></p></li>
-			<li><span class="icon icon-phone"></span><a href="tel:{{resume.profile.phone}}">{{resume.profile.phone}}</a></li>
+			<li class="language"><a href="#/cn">中文</a> <a href="#/en">English</a></li>
+			<li class="contact"><span class="icon icon-email"></span><a href="mailto:{{resume.profile.email}}?subject=Job" "email me">{{resume.profile.email}}</a></p></li>
+			<li class="contact"><span class="icon icon-phone"></span><a href="tel:{{resume.profile.phone}}">{{resume.profile.phone}}</a></li>
 		</ul>
 	</div>
 </div>

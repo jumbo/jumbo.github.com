@@ -22,6 +22,11 @@ p {
   ul { margin: 0; padding-left: 35px; list-style: none;
     li { color: $txtColor; line-height: 24px; }
   }
+  .language a{
+    display: inline-block;
+    margin-right: 10px;
+    color: lighten($txtColor,30%);
+  }
   .contact{
     a{
       color: $txtColor;
@@ -198,11 +203,4 @@ div.progress .meter { display: block; height: 100%;}
     @include transform2d(rotate(120deg));
   }
 }
-
-}
-
-@media print{
-  h3{
-    
-  }
 }

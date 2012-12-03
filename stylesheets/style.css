@@ -29,6 +29,11 @@
     color: #424242;
     line-height: 24px;
   }
+  .container .language a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #8f8f8f;
+  }
   .container .contact a {
     color: #424242;
   }
