@@ -5,11 +5,12 @@
 		<title>Grid sample</title>
 	</head>
 	<style type="text/css">
-		div{
+		#grid3{
 			width: 340px;
 			height: 340px;
+			margin-bottom: 20px;
 		}
-		a{
+		#grid3 a{
 			width: 100px;
 			border:10px solid blue;
 			display: block;
@@ -20,13 +21,58 @@
 			margin-right: -10px;
 			margin-bottom: -10px;
 		}
-		a:hover{
+		#grid3 a:hover{
 			border-color: red;
 			z-index: 999;
 		}
-	</style>
+
+		#yinyang{
+			width: 320px;
+			height: 320px;
+			padding: 10px;
+			background-color: red;
+		}
+		#yinyang a{
+			background-color: orange;
+			display: block;
+		}
+
+		#yinyang a:hover{
+			background-color: white;
+		}
+
+		#yinyang .first{
+			width: 210px;
+			height: 100px;
+			float: left;
+			margin-bottom: 10px;
+		}
+		#yinyang .second{
+			width: 100px;
+			height: 210px;
+			float: right;
+			margin-bottom: 10px;
+		}
+		#yinyang .third{
+			width: 100px;
+			height: 210px;
+			float: left;
+		}
+		#yinyang .fourth{
+			background-color: yellow;
+			width: 100px;
+			height: 100px;
+			float: left;
+			margin-left: 10px;
+		}
+		#yinyang .fifth{
+			width: 210px;
+			height: 100px;
+			float: right;
+		}
+		</style>
 	<body>
-		<div>
+		<div id="grid3">
 			<a href="#"></a>
 			<a href="#"></a>
 			<a href="#"></a>
@@ -36,6 +82,14 @@
 			<a href="#"></a>
 			<a href="#"></a>
 			<a href="#"></a>
+		</div>
+
+		<div id="yinyang">
+			<a href="#" class="first"></a>
+			<a href="#" class="second"></a>
+			<a href="#" class="third"></a>
+			<a href="#" class="fourth"></a>			
+			<a href="#" class="fifth"></a>			
 		</div>
 	</body>
 </html>
