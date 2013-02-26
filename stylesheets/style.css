@@ -106,6 +106,19 @@
     background-image: linear-gradient(top, #424242, #5c5c5c);
   }
 
+  .icon-download {
+    -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAADu0lEQVRoBe2a3YsNYRzHz3jfltUqe2UvlJXCBSnXSqQkhRLxByjX3FkSG1fWtZIkF0pckRSluJcLucJ6fy955/h8j5ltmmbmnOdtjtPOr77Nmefl9/t+n99znplnZqJms9kIbVEULSXGMjAjJ9Y0yl7C405OnfeiPALeg+BwCxgF/SDPblK4Pq/Cd5lGtwrTNCqbSmV1XvlVJdgraRdntWCX0euFvnWGeyFLLhzrDLuMXi/0rTPcC1ly4TjlMmx1L81mIGKUNVjtbhmTZKh9qcU+S9vElfLFXsNu12MlmIDzwE6gXVCLAMci+0XFWjC7qAHlI+A4aMdHg/wVnAWPgLlpoExBFAXeDV6BJMtVHL8R7xIYMuWctDcWO9mx0ZhO4APgHahS7KKEg83RWrCCYQPgBPgEQor+gf9bYMRGZLqPk+BY9CBELgL9t0KI/o3fB2BNmrjtb2fBseiFELoM9B/zLVqL0zpbgdl+XgTHoldC7DZQRnyJfoOvPWBmlrjtuTfBsejlkHsI/gBX0Z/xMWorrKifV8Gx6O0QfewoWn+NU2CgiLhteQjBuhHZB94Dmyz/pN8FMN9WVFk/74KTYBA+Ar4AE9G6K7sGBhM/vo8hBes28RDodOVWZq+AYd8i0/6CCVYQTPfc4+A7KMu0Vvb7YEWaXIjfQQXHoocQcgNouhaJfkLdrhACsz6DC45F63J1r0Cw7tD2ZomFOq9EcCx6E8KeZUTrfzsWSlye38oEx6I3IPBtSvTRPFIhy6KYCBw6M55MLKGlNgw2psVpBzgIroOT4CPQ/trUtB7oNeuESUcbwecJsNUkSKpta+nmfC7Q5UpT2kYs3Vor/ziCD+ukU9O10tT0qKbftFNO+zmUCbYm7rNMO9uOrmmc/6b9lBNsM6Wz2bpLwTnwIVvh8VwbksXgmKtPH4KfQuIqi8dzVzJF/bkyaCauAs6CvU1pgwfpRbralSvLzuZNsDOTihzUgisa6K6FqTPctaGvKHCd4YoGumth6gx3begrClxn2HaguZdONve2Ltr18+Lfx+ZBXwL0cS+thwJeSOUo10x0eVgw6dKH4NV4GwN6rRLSFvhw7kOw9qlCT1i9aPVEmv6R1P7YOGE2U3qCQPrIxMT0XknPsodBdiOvL3T01YDKs3UUFZr6vSisLarQ1SQ0iJ28RdRzaK3kaejjto2hOST+qxCrt4d675snNhGu1y/7E1Ihj0EFI0KfM50Bmn6JuKLja9psCylWvoMJhnwfOA06/QJAAyHRm0OK/gvxJWMFnp2HrwAAAABJRU5ErkJggg==');
+    -webkit-mask-size: 24px;
+    width: 20px;
+    height: 20px;
+    background-color: #424242;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #424242), color-stop(100%, #5c5c5c));
+    background-image: -webkit-linear-gradient(top, #424242, #5c5c5c);
+    background-image: -moz-linear-gradient(top, #424242, #5c5c5c);
+    background-image: -o-linear-gradient(top, #424242, #5c5c5c);
+    background-image: linear-gradient(top, #424242, #5c5c5c);
+  }
+
   h1 {
     margin-bottom: 0;
     font-size: 56px;

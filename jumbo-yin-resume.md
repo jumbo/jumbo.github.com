@@ -40,9 +40,9 @@
 技能
 -----------------------
 * 精通HTML,CSS
-* 熟练使用jQuery，Zepto，iScroll的前端框架
-* 了解前端MVC，使用backbone,angularjs,sencha touch尝试开发webapp
-* 精通Photoshop和Fireworks
+* 熟练使用jQuery，Zepto，iScroll等前端框架
+* 了解前端MVC，使用backbone,angularjs,sencha touch开发webapp
+* 精通Photoshop和Fireworks,有视觉和交互设计实践
 * 了解php及开发框架codeIgniter，有相关项目实践
 * 了解iOS开发
 

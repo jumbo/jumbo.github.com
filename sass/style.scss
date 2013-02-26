@@ -81,6 +81,15 @@ p {
   @include background-image(linear-gradient(top, $txtColor, lighten($txtColor,10%)));
 }
 
+.icon-download{
+  -webkit-mask-image: inline-image("icons/download1.png");
+  -webkit-mask-size: 24px;
+  width: 20px;
+  height: 20px;
+  background-color: $txtColor;
+  @include background-image(linear-gradient(top, $txtColor, lighten($txtColor,10%)));
+}
+
 h1 { margin-bottom: 0; font-size: 56px; }
 h3 { color: $mainColor; text-transform: uppercase; font-weight: normal;}
 h4 { margin:6px 0; color:$txtColor; font-weight:normal; font-size:16px;}
