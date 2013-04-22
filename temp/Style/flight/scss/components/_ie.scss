@@ -1,0 +1,55 @@
+/* ie hack */
+.ie6{
+	.form_panel{ 
+		zoom:1;
+		.form_field{
+			zoom:1;
+		}
+		.button{
+			zoom:1;
+		}
+	}
+	.form_step_control{
+		zoom:1;
+	}
+}
+.ie7{
+	select {
+		margin-top: 4px;
+	}
+}
+.lt-ie8{
+	.ico{
+		display: inline;
+		font-size: 7px;
+		&.return{
+			font-size: 12px;
+		}
+	}
+	.radio,.checkbox{
+		input {
+			display: inline;
+			margin:0 2px;
+		}
+	}
+	.row{
+		.control_label{
+			display: inline;
+		}
+		.controls {
+			input,label,textarea,select {
+				display: inline;
+				zoom: 1;
+			}
+		}
+		// .controls .input_txt{
+		// 	float: left;
+		// }
+	}
+	.pagination_centered{
+		.pagination li {
+			display: inline;
+		}
+	}
+
+}

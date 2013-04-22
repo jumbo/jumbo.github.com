@@ -1,0 +1,57 @@
+/* Grid */
+@function columnWidthMax($colNumber) {
+  @return $colNumber * 80 -20;
+}
+@function columnWidthMin($colNumber) {
+  @return $colNumber * 64 -14;
+}
+.row{
+    &.collapse{
+        padding-top: 0;
+    }
+    @include clearfix();
+    .columns{
+        float: left;
+        position: relative;
+    }
+    @for $i from 1 through 12 {
+        .span#{$i} { 
+            position: relative;
+            width: gridCalc($i, 12);
+        }
+    }
+    @for $i from 1 through 11 {
+        .push#{$i} { 
+            position: relative;
+            left: gridCalc($i, 12);
+            right: auto;
+        }
+        .pull#{$i} {
+            position: relative;
+            right: gridCalc($i, 12);
+            left: auto;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .row{
+    	@for $i from 1 through 12 {
+        	.span#{$i} { 
+    			position: relative;
+    			width: gridCalc($i, 12);
+          	}
+        }
+        @for $i from 1 through 11 {
+        	.push#{$i} { 
+        		position: relative;
+        		left: gridCalc($i, 12);
+        		right: auto;
+        	}
+        	.pull#{$i} {
+        		position: relative;
+        		right: gridCalc($i, 12);
+        		left: auto;
+        	}
+        }
+    }
+}

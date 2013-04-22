@@ -1,0 +1,353 @@
+@import "settings";
+@import "compass/css3";
+@import "foundation/foundation-global";
+
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button { margin:0;padding:0;}
+body { background-color:#fff;font-size:$base-font-size;line-height:1.5;font-family:$body-font-family;color:$body-font-color;}
+img { border:0;margin:0;padding:0;}
+input, textarea { font-size:$base-font-size;}
+table { border-collapse:collapse;}
+a { color:$default-link-color;text-decoration:none;}
+a:hover { text-decoration:underline;}
+ul, li { list-style: none;}
+dfn { font-style: normal;font-family: $third-font-family;}
+.left{ float: left;}
+.right { float: right;}
+.clearfix { @include clearfix();}
+.strong{ font-weight: bold;}
+.hide{ display: none; }
+[class*="posfixed"] { 
+	position: fixed !important;
+	top: 10px;
+}
+/* Components */
+@import "components/forms";
+@import "components/nav";
+@import "components/icons";
+@import "components/button";
+@import "components/grid";
+
+.abbr{ 
+	color: $default-link-color;
+	border-bottom: 1px $default-link-color dotted;
+	*border-bottom: 1px $default-link-color dashed;
+	cursor: pointer;
+}
+.toc {
+	li {
+		background:url(http://pic.ctrip.com/fltdomestic111027/ico_sprite.png) no-repeat 0 -385px;
+	}
+}
+.w1180{ width: 1180px; margin: 0 auto; position: relative; }
+.w980{ width: 980px; margin: 0 auto; position: relative; }
+
+/* Progress bar */
+.order_progress {
+	@include clearfix();
+	margin-bottom: 10px;
+	.step{
+		width: 24.9%;
+		float: left;
+		height: auto;
+		position: relative;
+		padding-top: 26px;
+		h4{
+			font-size: 12px;
+			font-weight: normal;
+			color: #9a9a9a;
+			text-align: center;
+			margin: 0;
+		}
+		i,.progress_line {
+			position: absolute;
+			font-size: 0;
+			background-image: url(http://pic.ctrip.com/fltdomestic111027/book_progress_8.png);
+			background-repeat: no-repeat;		
+		}
+		i {
+			width: 15px;
+			height: 15px;
+			display: block;
+			left: 50%;
+			top: 0;
+			margin-left: -7px;
+			background-position: 0 -20px;
+		}
+		.progress_line {
+			width: 100%;
+			height: 7px;
+			background-position: -100px -10px;
+			top: 4px;
+			left: 0;
+		}
+		.last {
+			background-position: 100% -10px;
+		}
+	}
+	.finished{
+		h4 {
+			color: #799d08;
+		}
+		i {
+			background-position: -20px -20px;
+		}
+		.progress_line {
+			background-position: -100px 0;
+		}
+		.first {
+			background-position: 0 0;
+		}
+		.last {
+			background-position: 100% 0;
+		}
+	}
+}
+
+/* Layout */
+.florder_fillin{ 
+	margin-right: 400px;
+}
+.sidebar_wrapper{
+	width: 100%;
+	height: 0;
+	position: absolute;
+	top: 0px;
+}
+.florder_info{ 
+	width: 380px;
+	position: absolute;
+	top:0;
+	right: 0;
+}
+
+/* Main Content */
+.mod_passenger_select{
+	padding-left: 20px;
+	position: relative;
+	.passenger_list{
+		margin-right: 100px;
+		.checkbox{ 
+			overflow: hidden;
+			width: 19%;
+			white-space: nowrap;
+			text-overflow:ellipsis;
+			input {
+				float: none;
+			}
+		}
+	}
+	.passenger_more{
+		display: none;
+		.text_field{
+			margin-left: 4px;
+			width: 200px;
+		}
+		.checkbox {
+			margin-bottom: 5px;
+		}
+	}
+	.show_more{
+		float: right;
+		margin-right: 10px;
+	}
+
+}
+
+.passenger_info {
+	border-top: 1px solid #c8d9ef;
+	position: relative;
+	margin-bottom: 10px;
+	.save_name{
+		width: 120px;
+		float: right;
+		margin-right: 15px;
+		margin-top: 5px;
+		color: #888;
+	}	
+	h4{
+		font-size: 12px;
+		height: 32px;
+		line-height: 32px;
+		color: #666;
+		margin-left: 100px;
+		width: 200px;
+		a {
+			font-size: 12px;
+			font-weight: normal;
+			margin-left: 10px;
+		}
+	}
+}
+.passenger_info_check{
+	.control_label{
+		height: 20px;
+		line-height: 20px;
+	}
+}
+
+.passenger_name{
+	font-size: 20px;
+	font-family: $second-font-family;
+	i {
+		font-style: normal;
+		font-size: 14px;
+	}
+}
+
+.passenger_id{
+	font-size: 14px;
+	font-family: $second-font-family;
+}
+
+.choose_city{
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+
+.flight_insurance{
+	background-color: #eff6fc;
+	width: 100%;
+	thead tr{
+		background-color: #dcecf6;
+		td{
+			padding:10px 0;
+			color: #666;
+			text-align: center;
+		}
+	}
+	tbody {
+		td{
+			padding:10px 0;
+			background-color: #eff6fc;
+			text-align: center;
+			border-right: 1px solid #dcecf6;
+			border-bottom: 1px solid #dcecf6;
+			span {
+				margin-right: 10px;
+			}
+		}
+		.last td{
+			border-bottom:none;	
+		}
+	} 
+}
+
+/* Side Content flight info */
+
+.mod_flightinfo{
+	border:1px solid #f2f2f2;
+	background-color: #fcfcfc;
+	margin-bottom: 10px;
+	padding:10px;
+	.flight_info{
+		margin-bottom: 10px;
+		h4{
+			margin-bottom: 5px;
+		}
+		p{
+			font-size: 12px;
+			margin-bottom: 5px;
+			span {
+				margin-right: 10px;
+			}
+		}
+		i {
+			font-style: normal;
+		}
+		.flight_number,.plane_type,.seat_type,.rule{
+			color: #666;
+			strong{
+				color: #444;
+			}
+		}
+		.flight_from,.flight_to {
+			display: inline-block;
+			width: 35%;
+			color: #000;
+			text-align: right;
+			.time {
+				font-weight: bold;
+			}
+		}
+		.flight_to {
+			text-align: left;
+			float: right;
+		}
+		dfn{
+			font-size: 12px;
+			color: #666;
+		}
+		.price_info{
+			padding-left: 20px;
+			color: #666;
+		}
+		.price_number{
+			color: #f60;
+			font-size: 14px;
+			font-family: $third-font-family;
+			font-weight: bold;
+		}
+	}
+	
+}
+
+
+.florder_price {
+	border:1px solid #f0e9d6;
+	background-color: #fffaed;
+	padding:10px 20px;
+	.row {
+		padding-bottom: 0;
+		.columns {
+			background-color: #fffaee;
+			padding-right:10px; 
+			&.right{
+				padding-right: 0;
+				padding-left: 10px;
+				float: right;
+				text-align: right;
+			}
+		}
+	}
+	.sum{
+		font-size: 14px;
+		font-weight: bold;
+		background: none;
+		line-height: 32px;
+		.price{
+			color: #ff6600;
+			font-size: 28px;
+			font-family: $body-font-family;
+			font-weight: normal;
+			dfn{
+				font-size: 14px;
+				vertical-align: top;
+				color: #666;
+			}
+		}
+	}
+	.more{
+		background: none;
+		text-align: right;
+	}
+	.headline{
+		font-weight: bold;
+	}
+}
+
+
+
+.tabs_container{
+	border-top: 1px solid #fff;
+	background-color: #f8f8f8;
+	padding:10px 20px;
+}
+
+/* flight logo padding fix */
+[class*="pubFlights"] {
+	padding-left: 22px !important;
+}
+//@import "components/custom_forms";
+@import "components/ie";
