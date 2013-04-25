@@ -24,7 +24,7 @@ label,select,button,.checkbox,.radio {
 	display: inline-block;
 	height: 14px;
 	line-height: 14px;
-	padding: 4px 0;
+	padding: 4px;
 	//text-indent: 6px;
 	width: 220px;
 	&:focus,&.focus{
@@ -35,10 +35,9 @@ label,select,button,.checkbox,.radio {
 	&.readonly {
 		background-color: #eee;
 	}
-
 	&.error {
 		border-color:$error-color !important;
-		background-color: #fffcd8;
+		background-color: #fffcd8 !important;
 	}
 }
 
@@ -77,18 +76,48 @@ label,select,button,.checkbox,.radio {
 	padding: 4px 6px;
 	margin: 3px 20px 0 0;
 	font-size:12px;
+	display: inline-block;
 }
 
 .help_inline {
 	border: 1px solid #d6c197;
+	padding:2px 5px 3px; 
 	background: #fffcd8;
 	color: #999;
+	line-height: 18px;
+	display: inline-block;
+	margin: 0 0 0 5px;
+	vertical-align: middle;
+	.ico{
+		margin-right: 2px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.help_inline {
+		border: 1px solid #d6c197;
+		padding:2px 5px 3px; 
+		background: #fffcd8;
+		color: #999;
+		line-height: 18px;
+		display: inline-block;
+		margin: 3px 0 0 0;
+		width: auto;
+		.tip_arrow_left{
+			display: none;
+		}
+	}
+}
+
+.help_text {
+	padding:2px 0 3px; 
+	color: #999;
+	line-height: 18px;
 	display: inline-block;
 	margin: 0 5px;
 	vertical-align: middle;
-	&.noframe{
-		background-color: #fff;
-		border:0;
+	.ico{
+		margin-right: 2px;
 	}
 }
 
@@ -111,19 +140,7 @@ select{
 	}
 }
 
-.checklist{
-	width: 350px;
-	&.lt2{
-		width: 200px;
-	}
-	.checkbox{
-		width: 150px;
-		margin-bottom: 5px;
-	}
-}
-
 .tip_arrow{
-	padding: 2px 5px;
 	position: relative;
 	.tip_arrow_left,.tip_arrow_right,.tip_arrow_top,.tip_arrow_down{
 		position: absolute;
@@ -131,8 +148,7 @@ select{
 		height: 7px;
 	}
 	.tip_arrow_left{
-		top: 50%;
-		margin-top: -3px;
+		top: 8px;
 		left: -5px;
 		background-position: 0 -225px;
 	}
@@ -152,9 +168,8 @@ select{
 .form_panel{ 
 	border:1px solid #d7e8f5; 
 	position: relative; 
-	padding-bottom: 0;
 	margin-bottom: 10px;
-	padding-left: 110px; 
+	padding-left: 110px;
 	h3 {
 		position: absolute; 
 		padding: 4px 10px 4px 15px; 
@@ -163,8 +178,17 @@ select{
 		top: 0;
 		font: 16px/34px $second-font-family;
 	}
+	
+}
+
+.form_extra{
+	border:1px solid #d7e8f5;
+	background-color: #eff6fc;
+	position: relative;
+	width: 110px;
+	height: 28px;
+	overflow: hidden;
 	h5{
-		background-color: #d7e8f5;
 		width: 110px; 
 		font-weight: normal; 
 		padding:4px 0;
@@ -173,21 +197,25 @@ select{
 		left: 0; 
 		top: 0; 
 		color: #666;
+		z-index: 999;
 		a {
 			color: #666;
 			font-size: 12px; 
 		}
 	}
+	.row {
+		margin-left: 130px;
+	}
 }
 
-.form_step_control{
+.form_action{
 	position: relative;
 	z-index: 99;
 	padding-bottom: 10px;
 	text-align: center;
 	.form_prev{
 		color: #0066cc;
-		font-size: 14px;
+		font-size: 12px;
 		position: absolute;
 		left: 20px;
 		top: 10px;
@@ -218,42 +246,34 @@ select{
 	position: relative;
 }
 
-.row {
-	padding: 5px 0;
-	position: relative;
-	.control_label { 
-		float: left;
-		width: 80px; 
-		text-align: right; 
-		color: #666;
-	}
-	.controls { 
-		margin-left: 100px;
-		.radio{
-			margin-right: 40px;
-		}
-		p {
-			padding: 5px 0;
-			.price {
-				color: #ff6600;
-				font-weight: bold;
-			}
-		}
-	}
-	.nolabel{ 
-		margin-left: 20px;
-		.checkbox{
-			margin-bottom: 0;
+.label { 
+	width: 80px; 
+	float: left;
+	text-align: right; 
+	color: #666;
+}
+.collection { 
+	margin-left: 100px;
+	p {
+		padding: 5px 0;
+		.price {
+			color: #ff6600;
+			font-weight: bold;
 		}
 	}
 }
-
+.nolabel{ 
+	margin-left: 20px;
+	.checkbox{
+		margin-bottom: 0;
+	}
+}
 .tab_pane{
 	.row{
-		.control_label{
+		.label{
 			width: 60px;
 		}
-		.controls {
+		.collection {
 			margin-left: 80px;
 		}
 	}

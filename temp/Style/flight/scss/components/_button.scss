@@ -3,8 +3,8 @@
 //
 
 // padding for buttons.
-$button-med:              12px !default;
-$button-tny:              7px !default;
+$button-med:              11px !default;
+$button-tny:              4px !default;
 $button-sml:              9px !default;
 $button-lrg:              16px !default;
 
@@ -16,10 +16,10 @@ $button-margin-bottom:    20px !default;
 $button-font-family:      inherit !default;
 $button-font-color:       #fff !default;
 $button-font-color-alt:   #333 !default;
-$button-font-med:         16px !default;
-$button-font-tny:         11px !default;
+$button-font-med:         14px !default;
+$button-font-tny:         12px !default;
 $button-font-sml:         13px !default;
-$button-font-lrg:         20px !default;
+$button-font-lrg:         16px !default;
 $button-font-weight:      normal !default;
 $button-font-align:       center !default;
 
@@ -66,14 +66,14 @@ $button-disabled-opacity: 0.6 !default;
   @if $padding {
     padding-top: $padding;
     padding-right: $padding * 2;
-    padding-bottom: $padding + 1px;
+    padding-bottom: $padding;
     padding-left: $padding * 2;
 
     // We control the font-size based on mixin input.
-    @if      $padding == $button-med { font-size: $button-font-med; }
-    @else if $padding == $button-tny { font-size: $button-font-tny; }
-    @else if $padding == $button-sml { font-size: $button-font-sml; }
-    @else if $padding == $button-lrg { font-size: $button-font-lrg; }
+    @if      $padding == $button-med { font-size: $button-font-med; font-family: $second-font-family; }
+    @else if $padding == $button-tny { font-size: $button-font-tny; font-family: $third-font-family; }
+    @else if $padding == $button-sml { font-size: $button-font-sml; font-family: $third-font-family; }
+    @else if $padding == $button-lrg { font-size: $button-font-lrg; font-family: $second-font-family; }
     @else                     { font-size: $padding - 2px; }
   }
 
@@ -101,18 +101,32 @@ $button-disabled-opacity: 0.6 !default;
 
   // We control which background styles are used,
   // these can be removed by setting $bg:false
+  @include box-shadow(0 1px 1px #bbc0c4);
   @if $bg == $secondary-color {
     background-color: $bg;
     border-color: #d1d1d1;
     color: #333;
     &:hover,
-    &:focus { 
+    &:focus,
+    &.focus { 
     	background-color: $primary-color;
-		color: #fff;
-		text-decoration: none;
+      border-color: $primary-color;
+		  color: #fff;
+		  text-decoration: none;
+      @include box-shadow(0 1px 2px #c6c6c6);
     }
-  }
-  @else if $bg {
+  } @else if $bg == $warning-color {
+    background-color: transparent;
+    border-color: $warning-color;
+    color: $warning-color;
+    &:hover,
+    &:focus { 
+      background-color: lighten($warning-color, $button-function-factor);
+      color: #fff;
+      text-decoration: none;
+      @include box-shadow(0 1px 2px #c6c6c6);
+    }
+  } @else if $bg {
     // This find the lightness percentage of the background color.
     $bg-lightness: lightness($bg);
 
@@ -121,7 +135,7 @@ $button-disabled-opacity: 0.6 !default;
     &:hover,
     &:focus { 
     	background-color: darken($bg, $button-function-factor);
-		text-decoration: none;
+		  text-decoration: none;
     }
 
     // We control the text color for you based on the background color.
@@ -161,44 +175,37 @@ $button-disabled-opacity: 0.6 !default;
 }
 
 .button {
-	@include button-base;
-    @include button-size;
-    @include button-style($secondary-color);
+  @include button-base;
+  @include button-size;
+  @include button-style;
 
-    &.secondary { @include button-style($bg:$secondary-color); }
-    &.success   { @include button-style($bg:$success-color); }
-    &.alert     { @include button-style($bg:$alert-color); }
-    &.warning     { @include button-style($bg:$warning-color); }
+  &.secondary { @include button-style($bg:$secondary-color); }
+  &.success   { @include button-style($bg:$success-color); }
+  &.alert     { @include button-style($bg:$alert-color); }
+  &.warning     { @include button-style($bg:$warning-color); }
+  &.submit     { @include button-style($bg:$submit-color); }
 
-    &.large  { @include button-size($padding:$button-lrg); }
-    &.small  { @include button-size($padding:$button-sml); }
-    &.tiny   { @include button-size($padding:$button-tny); }
-    &.expand { @include button-size(false,$full-width:true); }
+  &.large  { @include button-size($padding:$button-lrg); }
+  &.small  { @include button-size($padding:$button-sml); }
+  &.tiny   { @include button-size($padding:$button-tny); }
+  &.expand { @include button-size(false,$full-width:true); }
 
-    &.left-align  { text-align: left; text-indent: 12px; }
-    &.right-align { text-align: right; padding-right: 12px; }
+  &.left_align  { text-align: left; text-indent: 12px; }
+  &.right_align { text-align: right; padding-right: 12px; }
 
-    &.disabled, &[disabled] { @include button-style($bg:$primary-color, $disabled:true);
-      &.secondary { @include button-style($bg:$secondary-color, $disabled:true); }
-      &.success { @include button-style($bg:$success-color, $disabled:true); }
-      &.alert { @include button-style($bg:$alert-color, $disabled:true); }
-    }
+  &.disabled, &[disabled] { @include button-style($bg:$primary-color, $disabled:true);
+    &.secondary { @include button-style($bg:$secondary-color, $disabled:true); }
+    &.success { @include button-style($bg:$success-color, $disabled:true); }
+    &.alert { @include button-style($bg:$alert-color, $disabled:true); }
+  }
 }
 .submit{
-	text-shadow:1px 1px 0 #cf7000;
-	background-color:#ffb000;
-	border:solid 1px #e77c00;
-	color:#fff;
-	padding:6px 48px;
-	font-size:16px;
-	font-family:$second-font-family;
-	cursor:pointer;
-	text-align: center;
-	box-shadow:0 1px 0 rgba(95,50,0,0.7);
-	*filter:chroma(color=#000000);
-	@include border-radius(3px);
+  text-shadow:1px 1px 0 #cf7000;
+  color:#fff;
+  font-family:$second-font-family;
+  cursor:pointer;
+  *filter:chroma(color=#000000);
 }
-.submit:hover{
-	background-color:#f79700;
-	border-color:#de7800;
+.outline {
+  background-color: transparent;
 }

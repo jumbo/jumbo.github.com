@@ -6,13 +6,17 @@
   @return $colNumber * 64 -14;
 }
 .row{
+    padding: 5px 0;
     &.collapse{
         padding-top: 0;
     }
     @include clearfix();
-    .columns{
+    .cols{
         float: left;
         position: relative;
+        &.right{
+            float: right;
+        }
     }
     @for $i from 1 through 12 {
         .span#{$i} { 

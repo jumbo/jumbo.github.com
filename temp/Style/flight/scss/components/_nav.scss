@@ -8,24 +8,29 @@
 		margin-right: 10px;
 		a {
 			display: block;
-			font-size: 14px;
-			color: #515759;
-			padding: 8px;
-			border: 1px solid #c4c4c4;
-			border-color: #b2b2b2 #b2b2b2 #555;
+			font-size: 12px;
+			color: #000;
+			font-family: $body-font-family;
+			background-color: #fefefe;
+			padding: 7px 20px 8px;
+			border: 1px solid #d1d1d1;
 			@include border-radius(3px);
+			@include box-shadow(0 1px 2px #c6c6c6);
 			&:hover,
 			&:focus {
 				text-decoration: none;
+				color: #fff;
+				background-color: #0066cc;
 			}
 		}
 	}
 	.active{
 	 	a,a:hover,a:focus{
-			color: #515759;
-			background-color: #eee;
-			border: 1px solid #c4c4c4;
+	 		border-top: 2px solid #56a2ed;
+	 		background-color: #fefefe;
 			cursor: default;
+			color: #6d6d6d;
+			font-weight: bold;
 	 	}
 	} 
 }
@@ -41,16 +46,6 @@
 				display: inline-block;
 				margin-left: 30%;
 			}
-		}
-		li {
-			margin-bottom: 10px;
-			span {
-				display: inline-block;
-				margin-right: 20px;
-			}
-		}
-		.checked{
-			font-weight: bold;
 		}
 	}
 }

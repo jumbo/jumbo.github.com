@@ -12,157 +12,59 @@ a { color:$default-link-color;text-decoration:none;}
 a:hover { text-decoration:underline;}
 ul, li { list-style: none;}
 dfn { font-style: normal;font-family: $third-font-family;}
+/* Global CLS */
 .left{ float: left;}
 .right { float: right;}
 .clearfix { @include clearfix();}
 .strong{ font-weight: bold;}
 .hide{ display: none; }
-[class*="posfixed"] { 
-	position: fixed !important;
-	top: 10px;
-}
+[class*="posfixed"] { position: fixed !important; top: 10px; }
+.w1180{ min-width: 980px; max-width: 1180px; width: 100%; margin: 0 auto; position: relative; }
+.w980{ width: 980px; margin: 0 auto; position: relative; }
+.abbr{ color: $default-link-color; border-bottom: 1px $default-link-color dotted; *border-bottom: 1px $default-link-color dashed; cursor: pointer; }
+
 /* Components */
 @import "components/forms";
+@import "components/custom_forms";
 @import "components/nav";
 @import "components/icons";
 @import "components/button";
 @import "components/grid";
+@import "components/tooltip";
+@import "components/label";
 
-.abbr{ 
-	color: $default-link-color;
-	border-bottom: 1px $default-link-color dotted;
-	*border-bottom: 1px $default-link-color dashed;
-	cursor: pointer;
-}
-.toc {
-	li {
-		background:url(http://pic.ctrip.com/fltdomestic111027/ico_sprite.png) no-repeat 0 -385px;
-	}
-}
-.w1180{ width: 1180px; margin: 0 auto; position: relative; }
-.w980{ width: 980px; margin: 0 auto; position: relative; }
-
-/* Progress bar */
-.order_progress {
-	@include clearfix();
-	margin-bottom: 10px;
-	.step{
-		width: 24.9%;
-		float: left;
-		height: auto;
-		position: relative;
-		padding-top: 26px;
-		h4{
-			font-size: 12px;
-			font-weight: normal;
-			color: #9a9a9a;
-			text-align: center;
-			margin: 0;
-		}
-		i,.progress_line {
-			position: absolute;
-			font-size: 0;
-			background-image: url(http://pic.ctrip.com/fltdomestic111027/book_progress_8.png);
-			background-repeat: no-repeat;		
-		}
-		i {
-			width: 15px;
-			height: 15px;
-			display: block;
-			left: 50%;
-			top: 0;
-			margin-left: -7px;
-			background-position: 0 -20px;
-		}
-		.progress_line {
-			width: 100%;
-			height: 7px;
-			background-position: -100px -10px;
-			top: 4px;
-			left: 0;
-		}
-		.last {
-			background-position: 100% -10px;
-		}
-	}
-	.finished{
-		h4 {
-			color: #799d08;
-		}
-		i {
-			background-position: -20px -20px;
-		}
-		.progress_line {
-			background-position: -100px 0;
-		}
-		.first {
-			background-position: 0 0;
-		}
-		.last {
-			background-position: 100% 0;
-		}
-	}
-}
+/* mods */
+@import "mods/progressbar";
+@import "mods/name_selection";
+@import "mods/modal";
+@import "mods/passenger_selection";
 
 /* Layout */
-.florder_fillin{ 
+.florder_main{ 
 	margin-right: 400px;
+	.collection {
+		position: relative;
+		.tip_arrow{
+			max-width: 150px;
+		}
+		.radio{
+			margin-right: 10%;
+		}
+	}
 }
-.sidebar_wrapper{
-	width: 100%;
-	height: 0;
-	position: absolute;
-	top: 0px;
-}
-.florder_info{ 
-	width: 380px;
-	position: absolute;
-	top:0;
-	right: 0;
-}
+.sidebar_wrapper{ width: 100%; height: 0; position: absolute; top: 0px; }
+.florder_info{ width: 380px; position: absolute; top:0; right: 0; }
 
 /* Main Content */
-.mod_passenger_select{
-	padding-left: 20px;
-	position: relative;
-	.passenger_list{
-		margin-right: 100px;
-		.checkbox{ 
-			overflow: hidden;
-			width: 19%;
-			white-space: nowrap;
-			text-overflow:ellipsis;
-			input {
-				float: none;
-			}
-		}
-	}
-	.passenger_more{
-		display: none;
-		.text_field{
-			margin-left: 4px;
-			width: 200px;
-		}
-		.checkbox {
-			margin-bottom: 5px;
-		}
-	}
-	.show_more{
-		float: right;
-		margin-right: 10px;
-	}
-
-}
-
+/* Step 1 - fill in */
 .passenger_info {
 	border-top: 1px solid #c8d9ef;
 	position: relative;
 	margin-bottom: 10px;
-	.save_name{
-		width: 120px;
-		float: right;
-		margin-right: 15px;
-		margin-top: 5px;
+	.add_to_fav{
+		position: absolute;
+		right: 15px;
+		top: 10px;
 		color: #888;
 	}	
 	h4{
@@ -170,8 +72,7 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		height: 32px;
 		line-height: 32px;
 		color: #666;
-		margin-left: 100px;
-		width: 200px;
+		margin:0 120px 0 100px;
 		a {
 			font-size: 12px;
 			font-weight: normal;
@@ -179,32 +80,67 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		}
 	}
 }
-.passenger_info_check{
-	.control_label{
-		height: 20px;
-		line-height: 20px;
-	}
+.passenger_info_add{
+	background-color: transparent;
+	padding:0 0 10px;
 }
-
-.passenger_name{
-	font-size: 20px;
-	font-family: $second-font-family;
-	i {
-		font-style: normal;
+.passeger_card{
+	border-top: 1px solid #c8d9ef;
+	padding-top: 5px;
+}
+.deliver{
+	.ico_greentree{ margin-right: 10px;  float: right; }
+	.address {
+		position: relative;
+		padding: 5px 0;
+		.modify{ 
+			position: absolute; right: 20px; top: 0; 
+		}
+		.radio {
+			padding-right: 40px;
+		}
+		span {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		.checked {
+			font-weight: bold;
+		}
+		:hover{
+			background-color: #fff;
+		}
+	}
+	.choose_city{
 		font-size: 14px;
+		font-weight: bold;
+		color: #333;
+	}
+	.new_address {
+		padding-top: 10px;
+		margin-top: 10px;
+		border-top: 1px solid #b6b4b4;
 	}
 }
 
-.passenger_id{
-	font-size: 14px;
-	font-family: $second-font-family;
+/* Step 2 - check */
+.passenger_info_check{
+	.name {
+		font-size: 20px;
+		position: relative;
+		top: -5px;
+		font-family: $second-font-family;
+		i {
+			font-style: normal;
+			font-size: 14px;
+		}
+	}
+	.idcard {
+		font-size: 14px;
+		font-family: $second-font-family;
+	}
 }
 
-.choose_city{
-	font-size: 14px;
-	font-weight: bold;
-	color: #333;
-}
+
 
 .flight_insurance{
 	background-color: #eff6fc;
@@ -234,17 +170,55 @@ dfn { font-style: normal;font-family: $third-font-family;}
 	} 
 }
 
+.florder_insurance_list{
+	.florder_insurance_select{
+		display: none;
+		margin-bottom: 10px;
+	}
+	.checkbox{
+		margin-bottom: 10px;
+	}
+	.last .checkbox{
+		margin-bottom: 0;
+	}
+	select {
+		width: 100px;
+		margin: 0 10px 0 4px;
+		vertical-align: middle;
+	}
+}
+
 /* Side Content flight info */
 
+/* Table of content (Price detail) */
+.toc {
+	li {
+		background:url(http://pic.ctrip.com/fltdomestic111027/ico_sprite.png) no-repeat 0 -385px;
+		.cols {
+			background-color: #fffaed;
+			&.right{
+				padding-left: 10px;
+			}
+		}
+	}
+}
 .mod_flightinfo{
-	border:1px solid #f2f2f2;
-	background-color: #fcfcfc;
+	border:1px solid #dcdcdc;
+	background-color: #f7f7f7;
 	margin-bottom: 10px;
 	padding:10px;
 	.flight_info{
 		margin-bottom: 10px;
 		h4{
 			margin-bottom: 5px;
+			.transfer {
+				display: inline-block;
+				font-weight: normal;
+				padding:0 3px;
+				background-color: #92c0fc;
+				color: #fff;
+				@include border-radius(3px);
+			}
 		}
 		p{
 			font-size: 12px;
@@ -256,16 +230,26 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		i {
 			font-style: normal;
 		}
-		.flight_number,.plane_type,.seat_type,.rule{
+		.flight_number,.plane_type,.seat_type{
 			color: #666;
 			strong{
 				color: #444;
 			}
 		}
+		.rule{
+			i{
+				color: #666;
+			}
+		}
+		.flight_line{
+			position: relative;
+		}
+
 		.flight_from,.flight_to {
 			display: inline-block;
 			width: 35%;
 			color: #000;
+			float: left;
 			text-align: right;
 			.time {
 				font-weight: bold;
@@ -274,6 +258,19 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		.flight_to {
 			text-align: left;
 			float: right;
+		}
+		.flight_passby{
+			width: 30%;
+			position: absolute;
+			left: 35%;
+			height: 48px;
+			text-align: center;
+			background: url(http://pic.ctrip.com/fltdomestic111027/ico_sprite.png) -305px 15px no-repeat;
+			span {
+				background-color: #f7f7f7;
+				display: inline-block;
+				color: #999;
+			}
 		}
 		dfn{
 			font-size: 12px;
@@ -292,7 +289,6 @@ dfn { font-style: normal;font-family: $third-font-family;}
 	}
 	
 }
-
 
 .florder_price {
 	border:1px solid #f0e9d6;
@@ -328,7 +324,7 @@ dfn { font-style: normal;font-family: $third-font-family;}
 			}
 		}
 	}
-	.more{
+	.order_detail{
 		background: none;
 		text-align: right;
 	}
@@ -336,7 +332,6 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		font-weight: bold;
 	}
 }
-
 
 
 .tabs_container{
@@ -349,5 +344,5 @@ dfn { font-style: normal;font-family: $third-font-family;}
 [class*="pubFlights"] {
 	padding-left: 22px !important;
 }
-//@import "components/custom_forms";
+
 @import "components/ie";

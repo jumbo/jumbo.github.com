@@ -9,8 +9,16 @@
 			zoom:1;
 		}
 	}
+	.help_block {
+		margin-left: 3px;
+	}
 	.form_step_control{
 		zoom:1;
+	}
+	.mod_name_selection{
+		li{
+			display: inline;
+		}
 	}
 }
 .ie7{
@@ -22,7 +30,7 @@
 	.ico{
 		display: inline;
 		font-size: 7px;
-		&.return{
+		&.ico_return{
 			font-size: 12px;
 		}
 	}
@@ -36,15 +44,16 @@
 		.control_label{
 			display: inline;
 		}
-		.controls {
+		.collection {
 			input,label,textarea,select {
-				display: inline;
 				zoom: 1;
 			}
 		}
-		// .controls .input_txt{
-		// 	float: left;
-		// }
+	}
+
+	.help_inline {
+		display: inline;
+		padding: 3px 5px 4px;
 	}
 	.pagination_centered{
 		.pagination li {
