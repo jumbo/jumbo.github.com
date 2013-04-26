@@ -8,6 +8,7 @@
 		margin-right: 10px;
 		a {
 			display: block;
+			position: relative;
 			font-size: 12px;
 			color: #000;
 			font-family: $body-font-family;
@@ -22,9 +23,19 @@
 				color: #fff;
 				background-color: #0066cc;
 			}
+			.ico_tab_active{
+				visibility: hidden;
+				position: absolute;
+				top: 32px;
+				left: 50%;
+				margin-left: -6px;
+			}
 		}
 	}
 	.active{
+		.ico_tab_active {
+			visibility: visible;
+		}
 	 	a,a:hover,a:focus{
 	 		border-top: 2px solid #56a2ed;
 	 		background-color: #fefefe;

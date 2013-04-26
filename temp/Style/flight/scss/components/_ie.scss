@@ -11,6 +11,14 @@
 	}
 	.help_block {
 		margin-left: 3px;
+		display: inline;
+	}
+	.help_container{
+		.help_block{
+			.match {
+				display: inline;
+			}
+		}
 	}
 	.form_step_control{
 		zoom:1;

@@ -79,6 +79,15 @@ label,select,button,.checkbox,.radio {
 	display: inline-block;
 }
 
+.help_container{
+	.help_block{
+		display: none;
+		.match {
+			display: inline-block;
+		}
+	}
+}
+
 .help_inline {
 	border: 1px solid #d6c197;
 	padding:2px 5px 3px; 

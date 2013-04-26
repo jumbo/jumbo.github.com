@@ -1,0 +1,70 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button { margin:0;padding:0;}
+body { 
+	background-color:#fff;
+	font-size:$base-font-size;
+	line-height:1.5;
+	font-family:$body-font-family;
+	color:$body-font-color;
+}
+img { 
+	border:0;
+	margin:0;
+	padding:0;
+}
+input, textarea { 
+	font-size:$base-font-size;
+}
+table { 
+	border-collapse:collapse;
+}
+a { 
+	color:$default-link-color;
+	text-decoration:none;
+	&:hover{
+		text-decoration:underline;
+	}
+}
+ul, li { 
+	list-style: none;
+}
+dfn { 
+	font-style: normal;
+	font-family: $third-font-family;
+}
+/* Global CLS */
+.left{ 
+	float: left;
+}
+.right { 
+	float: right;
+}
+.clearfix { 
+	@include clearfix();
+}
+.strong{ 
+	font-weight: bold;
+}
+.hide{ 
+	display: none;
+}
+[class*="posfixed"] {
+	position: fixed !important;
+}
+.w1180{ 
+	min-width: 980px;
+	max-width: 1180px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.w980{ 
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+.abbr{ 
+	color: $default-link-color;
+	border-bottom: 1px $default-link-color dotted;
+	*border-bottom: 1px $default-link-color dashed;
+	cursor: pointer;
+}

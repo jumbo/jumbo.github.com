@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>国内机票首页</title>
+<title>北京到上海机票预订 - 北京到上海航班查询 - 国内机票预订 - 携程旅行网</title>
 <meta name="description" content="携程旅行网向超过1400万用户提供国内航班信息查询，国内航班机票预订服务，在业内首推1小时飞人通道电子机票极速预订服务。超低的折扣价格，优质的预订服务，安全的支付平台，覆盖全国的服务网络，是您购买机票的首选，免费咨询电话10106666" />
 <?php echo file_get_contents('http://'.$_SERVER['HTTP_HOST'].'/code_pub/cn/header_footer_v3.php?css=1'); ?>
 <link type="text/css" rel="stylesheet" href="http://webresource.ctrip.com/styles/fltdomestic111027/book.css" />
@@ -204,7 +204,7 @@
 			<div class="form_panel">
 				<h3>乘机人</h3>
 				<div class="mod_passenger_select form_field nobg">
-					<a href="###" class="more_passengers">显示更多<i class="ico ico_triangle down"></i></a>
+					<a href="###" class="more_passengers">显示更多<i class="ico ico_triangle down1"></i></a>
 					<div class="passenger_list clearfix">
 						<label class="checkbox" title="Mark Reeves Mark Reeves"><input type="checkbox" />Mark Reeves Mark Reeves</label>
 						<label class="checkbox" title="汪小磊"><input type="checkbox" />汪小磊</label>
@@ -253,7 +253,7 @@
 						<li class="row">
 							<label class="label">姓名</label>
 							<div class="collection">
-								<input type="text" class="input_txt error" style="width:255px;" />
+								<input type="text" class="input_txt" style="width:255px;" />
 								<span class="help_inline tip_arrow"><i class="ico tip_arrow_left"></i><span class="ico ico_warn"></span> 可售机票仅剩X张</span>
 								<a href="###" class="ico ico_input_tip">填写说明</a>
 								<div class="help_container">
@@ -261,12 +261,12 @@
 								</div>
 							</div>
 						</li>
-						<li class="row">
+						<li class="row passenger_age">
 							<label class="label">乘客类型</label>
 							<div class="collection">
-								<label class="radio"><input type="radio" name="radio1" id="radio1" checked="checked" />成人</label>
-								<label class="radio"><input type="radio" name="radio1" id="radio2" />儿童(2-12岁)</label>
-								<label class="radio"><input type="radio" name="radio1" id="radio3" />婴儿(14天-2岁)</label>
+								<label class="radio"><input type="radio" name="radio1" value="radio1" checked="checked" />成人</label>
+								<label class="radio"><input type="radio" name="radio1" value="radio2" />儿童(2-12岁)</label>
+								<label class="radio"><input type="radio" name="radio1" value="radio3" />婴儿(14天-2岁)</label>
 							</div>							
 						</li>
 						<li class="row">
@@ -305,6 +305,19 @@
 								<span class="help_inline tip_arrow"><i class="ico tip_arrow_left"></i><span class="ico ico_warn"></span> 可售机票仅剩X张</span>
 							</div>
 						</li>
+						<li class="row birthday_field hide">
+							<label class="label">出生日期</label>
+							<div class="collection">
+								<input type="text" class="input_txt"  style="width:255px;" />
+								<div class="help_container">
+									<div class="help_block">航空公司规定：未满14天的婴儿不能登机。</div>
+									<div class="help_block">年龄大于16周岁，不可使用户口簿，请使用其它成人有效证件。</div>
+									<div class="help_block">订单中含有青年特价机票，仅限在登机当天年龄为12—23周岁的乘客预订。</div>
+									<div class="help_block">订单中含有老年特价机票，仅限在登机当天年龄大于55周岁的乘客预订。</div>
+									<div class="help_block">很抱歉，携程无法满足用户***的服务需求，无法完成预定。</div>
+								</div>
+							</div>
+						</li>						
 						<li class="row">
 							<label class="label">保险信息</label>
 							<div class="collection">
@@ -393,9 +406,9 @@
 						<li class="row">
 							<label class="label">乘客类型</label>
 							<div class="collection">
-								<label class="radio"><input type="radio" name="radio2" id="radio4" checked="checked" />成人</label>
-								<label class="radio"><input type="radio" name="radio2" id="radio5" />儿童(2-12岁)</label>
-								<label class="radio"><input type="radio" name="radio2" id="radio6" />婴儿(14天-2岁)</label>
+								<label class="radio"><input type="radio" name="radio2" value="radio4" checked="checked" />成人</label>
+								<label class="radio"><input type="radio" name="radio2" value="radio5" />儿童(2-12岁)</label>
+								<label class="radio"><input type="radio" name="radio2" value="radio6" />婴儿(14天-2岁)</label>
 							</div>
 						</li>
 						<li class="row">
@@ -430,19 +443,6 @@
 									</div>
 								</div>
 								<input type="text" class="input_txt input_middle" style="width:129px;" placeholder="证件号码" value="320722198303008765" />
-							</div>
-						</li>
-						<li class="row birthday_field hide">
-							<label class="label">出生日期</label>
-							<div class="collection">
-								<input type="text" class="input_txt"  style="width:255px;" />
-								<div class="help_container">
-									<div class="help_block">航空公司规定：未满14天的婴儿不能登机。</div>
-									<div class="help_block">年龄大于16周岁，不可使用户口簿，请使用其它成人有效证件。</div>
-									<div class="help_block">订单中含有青年特价机票，仅限在登机当天年龄为12—23周岁的乘客预订。</div>
-									<div class="help_block">订单中含有老年特价机票，仅限在登机当天年龄大于55周岁的乘客预订。</div>
-									<div class="help_block">很抱歉，携程无法满足用户***的服务需求，无法完成预定。</div>
-								</div>
 							</div>
 						</li>
 						<li class="row">
@@ -572,10 +572,10 @@
 					</div>
 					<div class="row tabs_container hide">
 						<ul class="nav_tabs">
-							<li class="active"><a href="#deliver_free_mail" class="button">免费平邮</a></li>
-							<li><a href="#deliver_express" class="button">快递配送</a></li>
-							<li><a href="#deliver_self_airport" class="button">机场自取</a></li>
-							<li><a href="#deliver_self_city" class="button">市内自取</a></li>
+							<li class="active"><a href="#deliver_free_mail" class="button">免费平邮<i class="ico ico_tab_active"></i></a></li>
+							<li><a href="#deliver_express" class="button">快递配送<i class="ico ico_tab_active"></i></a></li>
+							<li><a href="#deliver_self_airport" class="button">机场自取<i class="ico ico_tab_active"></i></a></li>
+							<li><a href="#deliver_self_city" class="button">市内自取<i class="ico ico_tab_active"></i></a></li>
 						</ul>
 						<div class="tab_content">
 							<div class="tab_pane active" id="deliver_free_mail">
@@ -636,7 +636,7 @@
 									<div class="label">配送城市</div>
 									<div class="collection">
 										<h4 class="right"><i class="ico ico_info_s"></i>不支持现金支付</h4>
-										<a href="###" class="choose_city">上海<i class="ico ico_triangle down"></i></a>
+										<a href="###" class="choose_city">上海<i class="ico ico_triangle down1"></i></a>
 									</div>
 								</div>
 								<div class="row">
@@ -694,7 +694,7 @@
 								<div class="row">
 									<div class="label">自取城市</div>
 									<div class="collection">
-										<a href="###" class="choose_city">上海<i class="ico ico_triangle down"></i></a>
+										<a href="###" class="choose_city">上海<i class="ico ico_triangle down1"></i></a>
 									</div>
 								</div>
 								<div class="row">
@@ -720,7 +720,7 @@
 								<div class="row">
 									<div class="label">自取城市</div>
 									<div class="collection">
-										<a href="###" class="choose_city">上海<i class="ico ico_triangle down"></i></a>
+										<a href="###" class="choose_city">上海<i class="ico ico_triangle down1"></i></a>
 									</div>
 								</div>
 								<div class="row">
@@ -803,7 +803,7 @@
 			<div class="form_extra">
 				<h5><a href="###">附加信息 <i class="ico ico_dot_right text_left"></i></a></h5>
 				<div class="row">
-					<textarea name="" id="" cols="60" rows="3"></textarea>
+					<textarea name="" id="" cols="66" rows="3"></textarea>
 				</div>
 			</div>
 			<div class="form_field nobg">
@@ -833,6 +833,18 @@
 		// 给IE6添加焦点类
 		$(".input_txt").focus(function(){ $(this).addClass("focus"); });
 		$(".input_txt").blur(function(){ $(this).removeClass("focus"); });
+
+		// 模拟输入检查
+		$(".input_txt").keyup(function () {
+	      var value = $(this).val();
+	      if(value == "a" && $(this).parent().has(".help_container")){
+	      	$(this).parent().find(".help_block").eq(0).fadeIn();
+	      	$(this).addClass("error");
+	      } else {
+	      	$(this).parent().find(".help_block").eq(0).fadeOut();
+	      	$(this).removeClass("error");
+	      }
+	    });
 
 		// 姓名选择
 		$(".contact_name").focus(function(){
@@ -874,9 +886,10 @@
 		});
 
 		// 出生日期
-		$("#radio5").change(function(){
-			if($(this).is(":checked")) {
-				$(".birthday_field").fadeIn();
+		$(".passenger_age input").click(function(){
+			if($(this).val() == "radio2" || $(this).val() == "radio3" ) {
+				$(".birthday_field").fadeIn().addClass("pulse").find(".input_txt").focus();
+
 			} else {
 				$(".birthday_field").fadeOut();
 			}
@@ -890,20 +903,20 @@
 		});
 		// 附加信息
 		$(".form_extra a").toggle(function(){
-			$('.form_extra').animate({
-				width: "100%",
-				height: 55
-			}, 300, 'linear');
-		},function(){
-			$('.form_extra').animate({
-				width: 110,
-				height: 28
-			}, 300, 'linear');
+				$('.form_extra').animate({
+					width: "100%",
+					height: 55
+				}, 300, 'linear');
+			},function(){
+				$('.form_extra').animate({
+					width: 110,
+					height: 28
+				}, 300, 'linear');
 		});
 		// 更多乘机人
 		$(".more_passengers").click(function(){
-			$("i",this).toggleClass("down");
-			$("i",this).toggleClass("up");
+			$("i",this).toggleClass("down1");
+			$("i",this).toggleClass("up1");
 			$(".passenger_more").slideToggle();
 		});
 		// 价格细节
@@ -928,14 +941,19 @@
 		// 报销凭证
 		$(".voucher").change(function(){
 			if($(this).is(":checked")) {
-				$(this).parents(".row").next(".tabs_container").fadeIn();
+				$(this).parents(".row").next(".tabs_container").slideDown();
 			} else {
-				$(this).parents(".row").next(".tabs_container").fadeOut();
+				$(this).parents(".row").next(".tabs_container").slideUp();
 			}
 		});
 		$(".use_new_address").click(function(){
 			$(this).toggleClass("focus");
-			$(this).next(".new_address").fadeToggle();
+			$(this).next(".new_address").slideToggle();
+		});
+
+		//自定义select
+		$(".dropdown .options a").click(function(){
+			$(this).parents(".dropdown").find(".current").text($(this).text());
 		});
 	});
 </script>
@@ -969,7 +987,7 @@
 </div>
 
 <!-- 模态对话框 -->
-<div class="modal" role="dialog" style="display:block; position:static; margin:0;">
+<div class="modal" role="dialog" style="display:none; position:static; margin:0;">
 	<div class="modal_header">
    		<a href="###" class="close">&times;</a>
     	<h3>温馨提示</h3>
@@ -982,7 +1000,7 @@
 		<a href="#">返回重新选择航班</a>
 	</div>
 </div>
-<div class="modal" role="dialog" style="display:block; position:static; margin:0;">
+<div class="modal" role="dialog" style="display:none; position:static; margin:0;">
 	<div class="modal_header">
    		<a href="###" class="close">&times;</a>
     	<h3>温馨提示</h3>
@@ -995,7 +1013,7 @@
 		<a href="#">返回重新选择航班</a>
 	</div>
 </div>
-<div class="modal" role="dialog" style="display:block; position:static; margin:0;">
+<div class="modal" role="dialog" style="display:none; position:static; margin:0;">
 	<div class="modal_header">
    		<a href="###" class="close">&times;</a>
     	<h3>温馨提示</h3>
@@ -1009,7 +1027,7 @@
 		<a href="#" class="button small">返回重新选择航班</a>
 	</div>
 </div>
-<div class="modal" role="dialog" style="display:block; position:static; margin:0;">
+<div class="modal" role="dialog" style="display:block; top:40%;">
 	<div class="modal_header">
    		<a href="###" class="close">&times;</a>
     	<h3>温馨提示</h3>

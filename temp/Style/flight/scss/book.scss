@@ -2,28 +2,8 @@
 @import "compass/css3";
 @import "foundation/foundation-global";
 
-
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button { margin:0;padding:0;}
-body { background-color:#fff;font-size:$base-font-size;line-height:1.5;font-family:$body-font-family;color:$body-font-color;}
-img { border:0;margin:0;padding:0;}
-input, textarea { font-size:$base-font-size;}
-table { border-collapse:collapse;}
-a { color:$default-link-color;text-decoration:none;}
-a:hover { text-decoration:underline;}
-ul, li { list-style: none;}
-dfn { font-style: normal;font-family: $third-font-family;}
-/* Global CLS */
-.left{ float: left;}
-.right { float: right;}
-.clearfix { @include clearfix();}
-.strong{ font-weight: bold;}
-.hide{ display: none; }
-[class*="posfixed"] { position: fixed !important; top: 10px; }
-.w1180{ min-width: 980px; max-width: 1180px; width: 100%; margin: 0 auto; position: relative; }
-.w980{ width: 980px; margin: 0 auto; position: relative; }
-.abbr{ color: $default-link-color; border-bottom: 1px $default-link-color dotted; *border-bottom: 1px $default-link-color dashed; cursor: pointer; }
-
 /* Components */
+@import "components/global";
 @import "components/forms";
 @import "components/custom_forms";
 @import "components/nav";
@@ -32,7 +12,7 @@ dfn { font-style: normal;font-family: $third-font-family;}
 @import "components/grid";
 @import "components/tooltip";
 @import "components/label";
-
+@import "components/animate";
 /* mods */
 @import "mods/progressbar";
 @import "mods/name_selection";
@@ -52,10 +32,26 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		}
 	}
 }
-.sidebar_wrapper{ width: 100%; height: 0; position: absolute; top: 0px; }
-.florder_info{ width: 380px; position: absolute; top:0; right: 0; }
+.sidebar_wrapper{ 
+	width: 100%; 
+	height: 0; 
+	position: absolute; 
+	top: 0px; 
+}
+.florder_info{ 
+	width: 380px; 
+	position: absolute; 
+	top:0; 
+	right: 0; 
+}
+/* bonus */
+.birthday_field,.input_txt{
+	-webkit-animation-duration: 0.8s;
+	-webkit-animation-delay: .1s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+}
 
-/* Main Content */
 /* Step 1 - fill in */
 .passenger_info {
 	border-top: 1px solid #c8d9ef;
@@ -88,8 +84,13 @@ dfn { font-style: normal;font-family: $third-font-family;}
 	border-top: 1px solid #c8d9ef;
 	padding-top: 5px;
 }
+.tabs_container{
+	border-top: 1px solid #fff;
+	background-color: #ededed;
+	padding:10px 20px;
+}
 .deliver{
-	.ico_greentree{ margin-right: 10px;  float: right; }
+	.ico_greentree{ margin-right: 10px; margin-top: 5px;  float: right; }
 	.address {
 		position: relative;
 		padding: 5px 0;
@@ -139,9 +140,6 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		font-family: $second-font-family;
 	}
 }
-
-
-
 .flight_insurance{
 	background-color: #eff6fc;
 	width: 100%;
@@ -169,7 +167,6 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		}
 	} 
 }
-
 .florder_insurance_list{
 	.florder_insurance_select{
 		display: none;
@@ -190,7 +187,6 @@ dfn { font-style: normal;font-family: $third-font-family;}
 
 /* Side Content flight info */
 
-/* Table of content (Price detail) */
 .toc {
 	li {
 		background:url(http://pic.ctrip.com/fltdomestic111027/ico_sprite.png) no-repeat 0 -385px;
@@ -287,9 +283,7 @@ dfn { font-style: normal;font-family: $third-font-family;}
 			font-weight: bold;
 		}
 	}
-	
 }
-
 .florder_price {
 	border:1px solid #f0e9d6;
 	background-color: #fffaed;
@@ -332,12 +326,174 @@ dfn { font-style: normal;font-family: $third-font-family;}
 		font-weight: bold;
 	}
 }
-
-
-.tabs_container{
-	border-top: 1px solid #fff;
-	background-color: #f8f8f8;
-	padding:10px 20px;
+/* success */
+.florder_success{
+	border:1px solid #d3e0f2;
+	background-color: #eff6fc;
+	padding:60px 0 40px;
+	margin-bottom: 20px;
+	.florder_success_msg {
+		width: 820px;
+		margin:0 auto;
+		.ico_checked_xxlarge {
+			margin-right: 15px;
+			float: left;
+		}
+		.msg_container {
+			width: 660px;
+			float: left;
+			h3 {
+				font-family: $second-font-family;
+				font-size: 22px;
+				font-weight: normal;
+				margin-bottom: 5px;
+			}
+			.subtitle {
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+			.order_info{
+				width: 400px;
+				h4 {
+					font-family: $second-font-family;
+					font-size: 16px;
+				}
+				.view_order{
+					font-size: 14px;
+				}
+			}
+			.actions{
+				background-color: #dfecfc;
+				padding: 9px 10px;
+				@include border-radius(3px);
+				.button {
+					color: $primary-color;
+					margin-right: 10px;
+					&:hover{
+						color: #fff;
+					}
+				}
+				.ico_triangle {
+						margin-right: 10px;
+				}
+				.more_action {
+					
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+.recommend_title{
+	font-size: 16px;
+	font-family: $second-font-family;
+	font-weight: normal;
+	margin-bottom:10px; 
+}
+.recommend{
+	border:1px solid #e0e0e0;;
+	border-bottom: none;
+	background-color: #f4f4f4;
+	padding: 20px;
+	&.other{
+		border-bottom: 1px solid #e0e0e0;
+	}
+	h3{
+		font-family: $second-font-family;
+		font-weight: normal;
+		font-size: 18px;
+		margin-bottom: 15px;
+		em {
+			font-family: $body-font-family;
+			font-size: 12px;
+			margin-left: 20px;
+			font-style: normal;
+			.ico_solid_arrow{
+				margin: 0 4px;
+			}
+		}
+	}
+	.flight {
+		border:1px solid #d1d1d1;
+		@include box-shadow(0 1px 1px #c6c6c6);
+		@include border-radius(4px);
+		.daily_price{
+			text-align: center;
+			width: 12.5%;
+			float: left;
+			a {
+				display: block;
+				width: 100%;
+				height: 52px;
+				padding: 24px 0;
+				border-right: 1px solid #d1d1d1;
+				span {
+					font-size: 12px;
+					color: #4d4d4d;
+				}
+				.price{
+					display: block;
+					font-size: 22px;
+					color: #ff6600;
+					dfn {
+						font-size: 12px;
+						vertical-align: text-top;
+						color: #4d4d4d; 
+					}
+				}
+				&:hover{
+					text-decoration: none;
+					background-color: $primary-color;
+					color: #fff;
+					span{
+						color: #fff;
+					}
+					.price{
+						color: #fff;
+						dfn {
+							color: #fff; 
+						}
+					}
+					.ico_calendar_xxlarge {
+						background-position: -200px -75px;
+					}
+				}
+			}
+			&.first a {
+				@include side-radius(left,4px);
+			}
+			&.last a {
+				@include side-radius(right,4px);
+			}
+			&.season_price{
+				a {
+					padding: 10px 0;
+					height: 80px;
+					span {
+						display: block;
+						margin-top: 10px;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+	.hotel {
+		.hotel_item{
+			float: left;
+			width: 33%;
+			.hotel_image {
+				width: 100px;
+				height: 100px;
+				overflow: hidden;
+				@include border-radius(5px);
+				img {
+					width: 100px;
+					height: 100px;
+				}
+			}
+		}
+	}
 }
 
 /* flight logo padding fix */
