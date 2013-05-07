@@ -57,4 +57,36 @@
 			}
 		}
 	}
+	&.selection{
+		border:10px solid #7f7f7f;
+		width: 610px;
+		.modal_header{
+			background-color: #fff;
+			color: #666;
+			h3 {
+				font-size: 12px;
+			}
+		}
+		.modal_body{
+			padding: 0;
+			table {
+				width: 100%;
+				th{
+					background-color: #f1f1f1;
+					padding: 6px 0;
+					font-weight: normal;
+					border-top: 1px solid #ccc;
+					border-bottom: 1px solid #ccc;
+				}
+				td{
+					padding: 4px 0;
+					text-align: center;
+					border-bottom: 1px dotted #ccc;
+				}
+			}
+		}
+		.modal_footer{
+			padding: 10px;
+		}
+	}
 }

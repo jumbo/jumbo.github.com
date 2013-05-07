@@ -1,6 +1,6 @@
 @import "settings";
 @import "compass/css3";
-@import "foundation/foundation-global";
+@import "components/mixin";
 
 /* Components */
 @import "components/global";
@@ -18,14 +18,16 @@
 @import "mods/name_selection";
 @import "mods/modal";
 @import "mods/passenger_selection";
+@import "mods/stars";
+@import "mods/header";
+@import "mods/footer";
 
 /* Layout */
 .florder_main{ 
 	margin-right: 400px;
 	.collection {
-		position: relative;
 		.tip_arrow{
-			max-width: 150px;
+			max-width: 230px;
 		}
 		.radio{
 			margin-right: 10%;
@@ -44,6 +46,7 @@
 	top:0; 
 	right: 0; 
 }
+
 /* bonus */
 .birthday_field,.input_txt{
 	-webkit-animation-duration: 0.8s;
@@ -95,7 +98,7 @@
 		position: relative;
 		padding: 5px 0;
 		.modify{ 
-			position: absolute; right: 20px; top: 0; 
+			position: absolute; right: 20px; top: 4px; 
 		}
 		.radio {
 			padding-right: 40px;
@@ -129,7 +132,7 @@
 		font-size: 20px;
 		position: relative;
 		top: -5px;
-		font-family: $second-font-family;
+		font-family: $yahei;
 		i {
 			font-style: normal;
 			font-size: 14px;
@@ -137,7 +140,7 @@
 	}
 	.idcard {
 		font-size: 14px;
-		font-family: $second-font-family;
+		font-family: $yahei;
 	}
 }
 .flight_insurance{
@@ -169,20 +172,30 @@
 }
 .florder_insurance_list{
 	.florder_insurance_select{
-		display: none;
+		// display: none;
 		margin-bottom: 10px;
 	}
 	.checkbox{
 		margin-bottom: 10px;
 	}
-	.last .checkbox{
-		margin-bottom: 0;
+	.last { 
+		.checkbox{
+			margin-bottom: 0;
+		}
+		.florder_insurance_select{
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
 	}
 	select {
 		width: 100px;
 		margin: 0 10px 0 4px;
 		vertical-align: middle;
 	}
+}
+
+.florder_insurance_add{
+	padding: 10px;
 }
 
 /* Side Content flight info */
@@ -198,6 +211,12 @@
 		}
 	}
 }
+.florder_info {
+	.help_block{
+		display: block;
+		margin:0 0 10px 0;
+	}
+}
 .mod_flightinfo{
 	border:1px solid #dcdcdc;
 	background-color: #f7f7f7;
@@ -207,14 +226,6 @@
 		margin-bottom: 10px;
 		h4{
 			margin-bottom: 5px;
-			.transfer {
-				display: inline-block;
-				font-weight: normal;
-				padding:0 3px;
-				background-color: #92c0fc;
-				color: #fff;
-				@include border-radius(3px);
-			}
 		}
 		p{
 			font-size: 12px;
@@ -279,7 +290,7 @@
 		.price_number{
 			color: #f60;
 			font-size: 14px;
-			font-family: $third-font-family;
+			font-family: $arial;
 			font-weight: bold;
 		}
 	}
@@ -335,58 +346,61 @@
 	.florder_success_msg {
 		width: 820px;
 		margin:0 auto;
-		.ico_checked_xxlarge {
-			margin-right: 15px;
-			float: left;
+	}
+	.ico_checked_xxlarge {
+		margin-right: 15px;
+		float: left;
+	}
+	.msg_container {
+		width: 640px;
+		padding-left: 10px;
+		float: left;
+		h3 {
+			font-family: $yahei;
+			font-size: 22px;
+			font-weight: bold;
+			margin-bottom: 5px;
 		}
-		.msg_container {
-			width: 660px;
-			float: left;
-			h3 {
-				font-family: $second-font-family;
-				font-size: 22px;
-				font-weight: normal;
-				margin-bottom: 5px;
+		.subtitle {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+		.order_info{
+			width: 400px;
+			padding-bottom: 10px;
+			h4 {
+				font-family: $yahei;
+				font-size: 16px;
 			}
-			.subtitle {
+			.view_order{
 				font-size: 14px;
-				margin-bottom: 10px;
 			}
-			.order_info{
-				width: 400px;
-				h4 {
-					font-family: $second-font-family;
-					font-size: 16px;
-				}
-				.view_order{
-					font-size: 14px;
+		}
+		.actions{
+			margin-left: -10px;
+			background-color: #dfecfc;
+			padding: 9px 10px;
+			@include border-radius(3px);
+			.button {
+				color: $primary-color;
+				margin-right: 10px;
+				&:hover{
+					color: #fff;
 				}
 			}
-			.actions{
-				background-color: #dfecfc;
-				padding: 9px 10px;
-				@include border-radius(3px);
-				.button {
-					color: $primary-color;
+			.ico_triangle {
 					margin-right: 10px;
-					&:hover{
-						color: #fff;
-					}
-				}
-				.ico_triangle {
-						margin-right: 10px;
-				}
-				.more_action {
-					
-					margin-right: 20px;
-				}
+			}
+			.more_action {
+				
+				margin-right: 20px;
 			}
 		}
 	}
 }
 .recommend_title{
 	font-size: 16px;
-	font-family: $second-font-family;
+	font-family: $yahei;
 	font-weight: normal;
 	margin-bottom:10px; 
 }
@@ -399,7 +413,7 @@
 		border-bottom: 1px solid #e0e0e0;
 	}
 	h3{
-		font-family: $second-font-family;
+		font-family: $yahei;
 		font-weight: normal;
 		font-size: 18px;
 		margin-bottom: 15px;
@@ -421,59 +435,61 @@
 			text-align: center;
 			width: 12.5%;
 			float: left;
-			a {
+			
+		}
+		a {
+			display: block;
+			width: 100%;
+			height: 52px;
+			padding: 24px 0;
+			border-right: 1px solid #d1d1d1;
+			span {
+				font-size: 12px;
+				color: #4d4d4d;
+			}
+			.price{
 				display: block;
-				width: 100%;
-				height: 52px;
-				padding: 24px 0;
-				border-right: 1px solid #d1d1d1;
-				span {
+				font-size: 22px;
+				color: #ff6600;
+				dfn {
 					font-size: 12px;
-					color: #4d4d4d;
+					vertical-align: text-top;
+					color: #4d4d4d; 
+				}
+			}
+			&:hover{
+				text-decoration: none;
+				background-color: $primary-color;
+				color: #fff;
+				span{
+					color: #fff;
 				}
 				.price{
-					display: block;
-					font-size: 22px;
-					color: #ff6600;
-					dfn {
-						font-size: 12px;
-						vertical-align: text-top;
-						color: #4d4d4d; 
-					}
-				}
-				&:hover{
-					text-decoration: none;
-					background-color: $primary-color;
 					color: #fff;
-					span{
-						color: #fff;
-					}
-					.price{
-						color: #fff;
-						dfn {
-							color: #fff; 
-						}
-					}
-					.ico_calendar_xxlarge {
-						background-position: -200px -75px;
+					dfn {
+						color: #fff; 
 					}
 				}
+				.ico_calendar_xxlarge {
+					background-position: -200px -75px;
+				}
 			}
-			&.first a {
-				@include side-radius(left,4px);
-			}
-			&.last a {
-				@include side-radius(right,4px);
-			}
-			&.season_price{
-				a {
-					padding: 10px 0;
-					height: 80px;
-					span {
-						display: block;
-						margin-top: 10px;
-						font-weight: bold;
-					}
+		}
+		.first a {
+			@include side-radius(left,4px);
+		}
+		.last a {
+			@include side-radius(right,4px);
+		}
+		.season_price{
+			float: right;
+			a {
+				padding: 10px 0;
+				height: 80px;
+				span {
+					display: block;
+					margin-top: 10px;
+					font-weight: bold;
 				}
 			}
 		}
@@ -482,16 +498,114 @@
 		.hotel_item{
 			float: left;
 			width: 33%;
+			.hotel_name{
+				font-size: 14px;
+				font-weight: bold;
+				display: inline-block;
+				margin-bottom: 5px;
+			}
 			.hotel_image {
 				width: 100px;
 				height: 100px;
 				overflow: hidden;
+				float: left;
+				margin-right: 10px;
 				@include border-radius(5px);
 				img {
 					width: 100px;
 					height: 100px;
 				}
 			}
+			.hotel_user_action {
+				margin-bottom: 20px;
+			}
+			.hotel_price {
+				line-height: 100%;
+				dfn {
+					vertical-align: top;
+				}
+				.price_num{
+					color: $price-color;
+					font-size: 16px;
+					font-weight: bold;
+					padding: 0 3px;
+				}
+			}
+		}
+	}
+	.other{
+		position: relative;
+		.slider {
+			padding-right: 370px;
+			height: 90px;
+			.slider_prev,.slider_next{
+				display: inline-block;
+				width: 29px;
+				height: 90px;
+				background-color: #d6d6d6;
+				position: absolute;
+				top: 0;
+				text-indent: -9999px;
+				*zoom:1;
+				.ico{
+					position: absolute;
+					top: 36px;
+					left: 9px;
+				}
+				&:hover{
+					background-color: #c6c6c6;
+				}
+			}
+			.slider_next{
+				left: 735px;
+			}
+			.slider_items {
+				width: 700px;
+				margin-left: 32px;
+				overflow: hidden;
+				ul {
+					width: 2000px;
+				}
+				.slider_item {
+					width: 180px;
+					height: 90px;
+					float: left;
+					a {
+						width:160px;
+						height: 90px;
+						display: block;
+						overflow: hidden;
+					}
+				}
+			}
+		}
+		.event_news {
+			width: 350px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			li{
+				list-style: inside disc;
+				margin-bottom: 5px;
+				a {
+					color: $body-font-color;
+				}
+			}
+		}
+	}
+}
+.w980{
+	.help_inline {
+		border: 1px solid #d6c197;
+		padding:2px 5px 3px; 
+		background: #fffcd8;
+		color: #999;
+		line-height: 18px;
+		display: inline-block;
+		margin: 2px 0 0 0;
+		width: auto;
+		.tip_arrow_left{
+			display: none;
 		}
 	}
 }

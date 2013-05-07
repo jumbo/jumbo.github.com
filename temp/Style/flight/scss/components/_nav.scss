@@ -5,6 +5,7 @@
 	@include clearfix();
 	li {
 		float: left;
+		width: 90px;
 		margin-right: 10px;
 		a {
 			display: block;
@@ -13,7 +14,8 @@
 			color: #000;
 			font-family: $body-font-family;
 			background-color: #fefefe;
-			padding: 7px 20px 8px;
+			padding: 7px 0 8px;
+			text-align: center;
 			border: 1px solid #d1d1d1;
 			@include border-radius(3px);
 			@include box-shadow(0 1px 2px #c6c6c6);

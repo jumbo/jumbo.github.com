@@ -1,8 +1,50 @@
 /* Form */
+$form-spacing : 10px;
 
-@mixin inputText () {
+$label-pointer: pointer;
+$label-font-size: 12px;
+$label-font-weight: 500;
+$label-font-color: lighten(#000, 30%);
+$label-bottom-margin: 3px;
 
+$input-font-family: inherit;
+$input-font-color: #333;
+$input-font-size: 12px;
+$input-bg-color: #fff;
+$input-focus-bg-color: #fff;
+$input-border-color: #bbb;
+$input-focus-border-color: $primary-color;
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-disabled-bg: #eee;
+$input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+
+// all basic form elements their style
+@mixin form-element() {
+  background-color: $input-bg-color;
+  font-family: $input-font-family;
+  border: $input-border-width $input-border-style $input-border-color;
+  -webkit-box-shadow: $input-box-shadow;
+  box-shadow: $input-box-shadow;
+  color: $input-font-color;
+  //display: block;
+  font-size: $input-font-size;
+  margin: 0;
+  padding: $form-spacing / 2;
+  height: 14px;
+  width: 100%;
+
+  // Basic focus styles
+  &:focus,&.focus {
+    background: $input-focus-bg-color;
+    border-color: $input-focus-border-color;
+    outline: none;
+  }
+
+  // Disabled background input background color
+  &[disabled],&.readonly { background-color: $input-disabled-bg; }
 }
+
 
 label, input, button, select, textarea { 
 	font-size: $base-font-size;
@@ -17,39 +59,14 @@ label,select,button,.checkbox,.radio {
 }
 
 .input_txt{
-	border:1px solid #bbb;
-	vertical-align: middle;
-	color: #333;
-	font-size: $base-font-size;
-	display: inline-block;
-	height: 14px;
-	line-height: 14px;
-	padding: 4px;
-	//text-indent: 6px;
-	width: 220px;
-	&:focus,&.focus{
-		border-color: #67a1e2;
-		background-color: #fff !important;
-		outline: 0;
-	}
-	&.readonly {
-		background-color: #eee;
-	}
+	@include form-element();
+	width: 210px;
 	&.error {
 		border-color:$error-color !important;
 		background-color: #fffcd8 !important;
 	}
 }
 
-.input_group{
-	@include clearfix();
-	.input_txt,.help_inline,.ico{
-		float: left;
-	}
-}
-.input_block {
-	width: 100%;
-}
 .input_xxlarge {
 	width: 530px;
 }
@@ -73,15 +90,19 @@ label,select,button,.checkbox,.radio {
 	border: 1px solid #d6c197;
 	background: #fffcd8;
 	color: #999; 
-	padding: 4px 6px;
+	padding: 3px 6px 4px;
 	margin: 3px 20px 0 0;
 	font-size:12px;
-	display: inline-block;
+	display: block;
+	.ico{
+		margin-right: 4px;
+		margin-bottom: 1px;
+	}
 }
 
 .help_container{
 	.help_block{
-		display: none;
+		//display: none;
 		.match {
 			display: inline-block;
 		}
@@ -89,16 +110,17 @@ label,select,button,.checkbox,.radio {
 }
 
 .help_inline {
+	position: relative;
 	border: 1px solid #d6c197;
 	padding:2px 5px 3px; 
 	background: #fffcd8;
 	color: #999;
-	line-height: 18px;
 	display: inline-block;
-	margin: 0 0 0 5px;
+	margin: 0 0 0 4px;
 	vertical-align: middle;
 	.ico{
 		margin-right: 2px;
+		margin-bottom: 1px;
 	}
 }
 
@@ -135,10 +157,14 @@ label,select,button,.checkbox,.radio {
 }
 
 select{ 
-	height: 24px;
+	height: 26px;
 	font-size: $base-font-size;
 	line-height: 24px;
 	padding:0;
+	border: $input-border-width $input-border-style $input-border-color;
+	&:focus{
+		outline: none;
+	}
 }
 
 .radio,.checkbox{
@@ -149,18 +175,15 @@ select{
 	}
 }
 
-.tip_arrow{
-	position: relative;
-	.tip_arrow_left,.tip_arrow_right,.tip_arrow_top,.tip_arrow_down{
-		position: absolute;
-		width: 7px;
-		height: 7px;
-	}
-	.tip_arrow_left{
-		top: 8px;
-		left: -5px;
-		background-position: 0 -225px;
-	}
+.tip_arrow_left,.tip_arrow_right,.tip_arrow_top,.tip_arrow_down{
+	position: absolute;
+	width: 7px;
+	height: 7px;
+}
+.tip_arrow_left{
+	top: 8px;
+	left: -5px;
+	background-position: 0 -225px;
 }
 
 .form_notice{
@@ -185,7 +208,7 @@ select{
 		color: #666;
 		left: 0px;
 		top: 0;
-		font: 16px/34px $second-font-family;
+		font: 16px/34px $yahei;
 	}
 	
 }
@@ -260,6 +283,7 @@ select{
 	float: left;
 	text-align: right; 
 	color: #666;
+	line-height: 20px;
 }
 .collection { 
 	margin-left: 100px;

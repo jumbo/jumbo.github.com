@@ -39,6 +39,7 @@
 	width: 12px;
 	height: 15px;
 	background-position: 0 -150px;
+	cursor: pointer;
 }
 .ico_plus{
 	background-position: 0 -25px;
@@ -100,6 +101,16 @@
 	width: 12px;
 	height: 7px;
 	background-position: 0 -350px;
+}
+.ico_prev{
+	width: 10px;
+	height: 19px;
+	background-position: -50px -325px;
+}
+.ico_next{
+	width: 10px;
+	height: 19px;
+	background-position: -75px -325px;
 }
 .button:hover,.button:focus,.button.focus {
 	.ico_dot_left{

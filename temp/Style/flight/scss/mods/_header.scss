@@ -1,0 +1,82 @@
+//header
+
+.ctrip_logo a,
+.cui_lang a,
+#cui_lang_bottom a,
+.cui_lang i{
+	background-image:url(http://pic.c-ctrip.com/common/un_hd_bg20121109.png);
+	background-repeat:no-repeat;
+}
+
+.ctrip_logo{
+	width:168px;
+	padding-top:34px;
+	margin-left:5px;
+	a {
+		display:block;height:60px;overflow:hidden;background-position:0 0;text-indent:-999em;
+	}
+}
+
+.cui_lang{
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:3;
+	padding-left:5px;
+	width:92px;
+	height:20px;
+	overflow:hidden;
+	border:1px solid #fff;
+	background-color:#fff;
+	font-family:$arial;
+	i {
+		position:absolute;
+		top:7px;
+		right:5px;
+		width:7px;
+		height:4px;
+		overflow:hidden;
+		background-position:0 -61px;
+		*zoom:1;
+	}
+	a {
+		display:block;
+		line-height:20px;
+		padding-left:26px;
+	}
+}
+.cui_lang_hover i{background-position:-18px -61px;}
+.cui_lang_hover{
+	height:160px;
+	border-color:#e8e8e8;
+	a:hover{color:#b00;text-decoration:none;}
+}
+
+.cui_lang_big5,
+.cui_lang_gb,
+.cui_lang_jp,
+.cui_lang_korea,
+.cui_lang_ru_big5{
+	height:0;
+	padding-top:20px;
+	padding-left:30px;
+	overflow:hidden;
+	background-color:#0053aa;
+}
+
+.cui_lang_en{background-position:0 -279px;}
+.cui_lang_de{background-position:0 -297px;}
+.cui_lang_jp{background-position:0 -223px;}
+.cui_lang_korea{background-position:0 -242px;}
+.cui_lang_big5{background-position:0 -185px;}
+.cui_lang_gb{background-position:0 -204px;}
+.cui_lang_fr{background-position:0 -316px;}
+.cui_lang_es{background-position:0 -334px;}
+.cui_lang_ru{background-position:0 -351px;}
+.cui_lang_ru_big5{background-position:0 -260px;}
+
+.cui_lang_big5:hover,
+.cui_lang_gb:hover,
+.cui_lang_jp:hover,
+.cui_lang_korea:hover,
+.cui_lang_ru:hover{background-color:#b00;}

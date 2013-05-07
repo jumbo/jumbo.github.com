@@ -19,11 +19,12 @@
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
-	height: 22px;
+	height: 24px;
 	padding: 0px;
 	border:1px solid #ccc;
 	background: #fff;
 	font-size: 12px;
+	z-index: 9;
 	.current{
 		cursor:default;
 		white-space: nowrap;
@@ -33,6 +34,9 @@
 		overflow: hidden;
 		display: block;
 		margin-left: 5px;
+		&:hover{
+			text-decoration: none;
+		}
 	}
 	.selector{
 		cursor:default;
@@ -71,7 +75,7 @@
 		left: -1px;
 		z-index: 10;
 		background-color: #fff;
-		h5{
+		p {
 			margin: 0;
 			font-weight: normal;
 			padding:5px;

@@ -1,0 +1,29 @@
+.rating{
+	background-image: url(http://pic.ctrip.com/fltdomestic111027/ico_sprite.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 12px;
+}
+
+@for $i from 1 through 5 {
+    .star_#{$i} {
+		width: 14px*$i;
+		background-position: -316px -75px;
+    }
+    @if $i < 5 {
+    	.star_#{$i}d5 {
+			width: 14px*$i+14px;
+			background-position: 100% -75px;
+	    }
+    }
+    .diamond_#{$i} {
+		width: 14px*$i;
+		background-position: -316px -50px;
+    }
+    @if $i < 5 {
+    	.diamond_#{$i}d5 {
+			width: 14px*$i+14px;
+			background-position: 100% -50px;
+	    }
+    }
+}

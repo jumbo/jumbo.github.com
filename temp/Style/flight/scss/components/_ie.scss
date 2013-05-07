@@ -9,24 +9,24 @@
 			zoom:1;
 		}
 	}
-	.help_block {
-		margin-left: 3px;
-		display: inline;
-	}
-	.help_container{
-		.help_block{
-			.match {
-				display: inline;
-			}
-		}
-	}
 	.form_step_control{
 		zoom:1;
 	}
 	.mod_name_selection{
 		li{
 			display: inline;
+			overflow: hidden;
+			text-overflow:ellipsis;
 		}
+	}
+	.passeger_card{
+		zoom:1;
+	}
+	.recommend{
+		zoom:1;
+	}
+	.input_txt{
+		margin-left: -3px;
 	}
 }
 .ie7{
@@ -35,6 +35,9 @@
 	}
 }
 .lt-ie8{
+	.w1180{
+		width: 1180px;
+	}
 	.ico{
 		display: inline;
 		font-size: 7px;
@@ -49,8 +52,8 @@
 		}
 	}
 	.row{
-		.control_label{
-			display: inline;
+		.label{
+			line-height: 24px;
 		}
 		.collection {
 			input,label,textarea,select {
@@ -58,15 +61,46 @@
 			}
 		}
 	}
-
 	.help_inline {
 		display: inline;
 		padding: 3px 5px 4px;
+	}
+	
+	.help_block {
+		padding: 4px 6px 5px;
+		.ico{
+			margin-top: 2px;
+		}
+	}
+	.dropdown{
+		display: inline;
+		margin-right: 5px;
 	}
 	.pagination_centered{
 		.pagination li {
 			display: inline;
 		}
 	}
-
+	.recommend{
+		.flight{
+			.season_price{
+				border:0;
+				width: 11.6%;
+			}
+		}
+	}
+	
+	.deliver{
+		.address {
+			zoom: 1;
+		}
+	}
+	.nav_tabs{
+		li{
+			zoom:1;
+			.ico_tab_active{
+				top: 34px;
+			}
+		}
+	}
 }

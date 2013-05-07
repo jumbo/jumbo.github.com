@@ -61,8 +61,6 @@ $button-disabled-opacity: 0.6 !default;
 
 @mixin button-size($padding:$button-med, $full-width:false, $is-input:false) {
 
-  // We control which padding styles come through,
-  // these can be turned off by setting $padding:false
   @if $padding {
     padding-top: $padding;
     padding-right: $padding * 2;
@@ -70,10 +68,10 @@ $button-disabled-opacity: 0.6 !default;
     padding-left: $padding * 2;
 
     // We control the font-size based on mixin input.
-    @if      $padding == $button-med { font-size: $button-font-med; font-family: $second-font-family; }
-    @else if $padding == $button-tny { font-size: $button-font-tny; font-family: $third-font-family; }
-    @else if $padding == $button-sml { font-size: $button-font-sml; font-family: $third-font-family; }
-    @else if $padding == $button-lrg { font-size: $button-font-lrg; font-family: $second-font-family; }
+    @if      $padding == $button-med { font-size: $button-font-med; font-family: $yahei; }
+    @else if $padding == $button-tny { font-size: $button-font-tny; font-family: $arial; }
+    @else if $padding == $button-sml { font-size: $button-font-sml; font-family: $arial; }
+    @else if $padding == $button-lrg { font-size: $button-font-lrg; font-family: $yahei; }
     @else                     { font-size: $padding - 2px; }
   }
 
@@ -107,8 +105,7 @@ $button-disabled-opacity: 0.6 !default;
     border-color: #d1d1d1;
     color: #333;
     &:hover,
-    &:focus,
-    &.focus { 
+    &:focus{ 
     	background-color: $primary-color;
       border-color: $primary-color;
 		  color: #fff;
@@ -187,22 +184,22 @@ $button-disabled-opacity: 0.6 !default;
 
   &.large  { @include button-size($padding:$button-lrg); }
   &.small  { @include button-size($padding:$button-sml); }
-  &.tiny   { @include button-size($padding:$button-tny); }
+  &.tiny   { @include button-size($padding:$button-tny); vertical-align: middle; }
   &.expand { @include button-size(false,$full-width:true); }
 
   &.left_align  { text-align: left; text-indent: 12px; }
   &.right_align { text-align: right; padding-right: 12px; }
 
-  &.disabled, &[disabled] { @include button-style($bg:$primary-color, $disabled:true);
-    &.secondary { @include button-style($bg:$secondary-color, $disabled:true); }
-    &.success { @include button-style($bg:$success-color, $disabled:true); }
-    &.alert { @include button-style($bg:$alert-color, $disabled:true); }
-  }
+  // &.disabled, &[disabled] { @include button-style($bg:$primary-color, $disabled:true);
+  //   &.secondary { @include button-style($bg:$secondary-color, $disabled:true); }
+  //   &.success { @include button-style($bg:$success-color, $disabled:true); }
+  //   &.alert { @include button-style($bg:$alert-color, $disabled:true); }
+  // }
 }
 .submit{
   text-shadow:1px 1px 0 #cf7000;
   color:#fff;
-  font-family:$second-font-family;
+  font-family:$yahei;
   cursor:pointer;
   *filter:chroma(color=#000000);
 }
