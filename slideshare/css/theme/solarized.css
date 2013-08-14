@@ -13,7 +13,7 @@
  * Solarized colors by Ethan Schoonover
  */
 html body {
-  background: url(images/whitebg.png); }
+  background: url(/slideshare/images/whitebg.png); }
 
 html * {
   color-profile: sRGB;
