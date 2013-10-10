@@ -56,8 +56,8 @@
 
 Misc
 -----------------------
-+ Markdown:[http://jumbo.github.com/jumbo-yin-resume.md](http://jumbo.github.com/jumbo-yin-resume.md)
-+ HTML:[http://jumbo.github.com/jumbo-yin-resume.html](http://jumbo.github.com/jumbo-yin-resume.html)
-+ PDF:[http://jumbo.github.com/jumbo-yin-resume.pdf](http://jumbo.github.com/jumbo-yin-resume.pdf)
-+ RTF:[http://jumbo.github.com/jumbo-yin-resume.rtf](http://jumbo.github.com/jumbo-yin-resume.rtf)
-+ HTML图文:[http://jumbo.github.com](http://jumbo.github.com)
++ Markdown:[http://jumbo.github.com/resume/jumbo-yin.md](http://jumbo.github.com/resume/jumbo-yin.md)
++ HTML:[http://jumbo.github.com/resume/jumbo-yin.html](http://jumbo.github.com/resume/jumbo-yin.html)
++ PDF:[http://jumbo.github.com/resume/jumbo-yin.pdf](http://jumbo.github.com/resume/jumbo-yin.pdf)
++ RTF:[http://jumbo.github.com/resume/jumbo-yin.rtf](http://jumbo.github.com/resume/jumbo-yin.rtf)
++ HTML图文:[http://jumbo.github.com/resume/](http://jumbo.github.com/resume/)
