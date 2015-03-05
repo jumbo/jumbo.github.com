@@ -44,7 +44,7 @@
 
 ## Misc
 
-+ Markdown:[http://jumbo.github.com/resume/jumbo-yin.md](http://jumbo.github.com/resume/jumbo-yin.md)
-+ HTML:[http://jumbo.github.com/resume/jumbo-yin.html](http://jumbo.github.com/resume/jumbo-yin.html)
-+ PDF:[http://jumbo.github.com/resume/jumbo-yin.pdf](http://jumbo.github.com/resume/jumbo-yin.pdf)
-+ RTF:[http://jumbo.github.com/resume/jumbo-yin.rtf](http://jumbo.github.com/resume/jumbo-yin.rtf)
++ Markdown: [http://jumbo.github.com/resume/jumbo-yin.md](http://jumbo.github.com/resume/jumbo-yin.md)
++ HTML: [http://jumbo.github.com/resume/jumbo-yin.html](http://jumbo.github.com/resume/jumbo-yin.html)
++ PDF: [http://jumbo.github.com/resume/jumbo-yin.pdf](http://jumbo.github.com/resume/jumbo-yin.pdf)
++ RTF: [http://jumbo.github.com/resume/jumbo-yin.rtf](http://jumbo.github.com/resume/jumbo-yin.rtf)
